@@ -1,0 +1,192 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{background_image}}" wx:key="*this">
+          <swiper-item>
+            <!-- <view class="swiper-item {{item}}"></view> -->
+            <navigator class="swiper-item" url="">
+              <image src="{{item}}"></image>
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section page-items">
+      <view class="page-yhc-item">
+        <navigator url="">
+          <image src="../../images/dzjy.png"></image>
+          <view>大宗交易</view>
+        </navigator>
+      </view>
+      <view class="page-yhc-item">
+        <navigator url="">
+          <image src="../../images/dxzf.png"></image>
+          <view>定向增发</view>
+        </navigator>
+      </view>
+      <view class="page-yhc-item">
+        <navigator url="">
+          <image src="../../images/dzjy.png"></image>
+          <view>大宗交易</view>
+        </navigator>
+      </view>
+      <view class="page-yhc-item">
+        <navigator url="">
+          <image src="../../images/dxzf.png"></image>
+          <view>定向增发</view>
+        </navigator>
+      </view>
+    </view>
+    <view class="page-section adsecs">
+      <!-- 公告 -->
+      <view class='adsec'>
+        <icon class='iconfont icongonggao c_main fs_36'>
+          <image src="../../images/gonggao.png"></image>
+        </icon>
+        <text class='c_main fs_26'>公告：</text>
+        <swiper class="swiper_container" autoplay="true" circular="true" interval="2000">
+          <block wx:for="{{msgList}}">
+            <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
+              <swiper-item>
+                <view class="swiper_item">{{item.title}}</view>
+              </swiper-item>
+            </navigator>
+          </block>
+        </swiper>
+      </view>
+      <!-- 公告 end -->
+    </view>
+    <view class="page-section">
+      <view class="weui-panel">
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+              <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                 大宗交易
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view class="weui-cell_primary_view">市场最新项目</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access weui-cell__ft-active">
+                  更多
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+        
+        <swiper class="swiper_background" indicator-dots="{{indicatorDotss}}" autoplay="{{autoplays}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="20rpx" next-margin="40rpx">
+          <block wx:for="{{background}}" wx:key="*this">
+            <swiper-item class="swiper-item_background">
+              <navigator class="swiper-item_background_out" url="">
+                <view class="swiper-item_background_in {{item}}">
+                  <view class="swiper-item_background_in_view">
+                    <view>二三四五</view>
+                    <view>88.00%市价</view>
+                  </view>
+                </view>
+              </navigator>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <!-- 精选项目 start-->
+    <view class="page-section">
+      <view class="weui-panel">
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+              <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                 精选一手项目
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view class="weui-cell_primary_view">最新/一手/真实</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access weui-cell__ft-active">
+                  更多
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+        
+        <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="{{icon1}}" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">材料制作企业并购基金</view>
+                        <view class="weui-media-box__desc">材料制作企业并购基金</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="{{icon2}}" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">可转债业务融资</view>
+                        <view class="weui-media-box__desc">可转债业务融资</view>
+                    </view>
+                </navigator>
+            </view>
+      </view>
+    </view>
+    <!-- 精选项目end -->
+    <!-- 金融知识 start-->
+     <view class="page-section">
+      <view class="weui-panel">
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+              <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                 金融知识
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view class="weui-cell_primary_view"></view>
+                </view>
+                <!-- <view class="weui-cell__ft weui-cell__ft_in-access weui-cell__ft-active">
+                </view> -->
+              </navigator>
+            </view>
+          </view>
+        </view>
+        
+        <view class="page__bd page__bd_spacing">
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">玩转定增</view>
+                        <view class="weui-media-box__desc">定增的投资机会</view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="weui-flex__item">
+              <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">启航大宗</view>
+                        <view class="weui-media-box__desc">大宗交易</view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="weui-flex__item">
+              <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">可转债简析</view>
+                        <view class="weui-media-box__desc">一文读懂可转债</view>
+                    </view>
+                </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 金融知识 end -->
+  </view>
+</view>

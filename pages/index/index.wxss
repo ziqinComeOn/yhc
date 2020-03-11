@@ -1,0 +1,237 @@
+@import "../../utils/same.wxss";
+
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+.page-body{
+  height: auto;
+}
+.page-section{
+  width: 100%;
+}
+.page-section_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.page-section-spacing{
+  box-sizing: border-box;
+  padding: 0rpx;
+}
+.page-section-title{
+  font-size: 28rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.page-section-gap .page-section-title{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.demo-text-1{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbb878;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-1:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo-text-2{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #2782D7;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-2:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo-text-3{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1F1;
+  color: #353535;
+  font-size: 36rpx;
+}
+.demo-text-3:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button{
+  margin-bottom: 30rpx;
+}
+button:last-child{
+  margin-bottom: 0;
+}
+.page-section-title{
+  padding: 0;
+}
+.swiper-item{
+  display: block;
+  width:100%;
+  height: 300rpx;
+}
+.swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+.page-section-title{
+  margin-top: 60rpx;
+  position: relative;
+}
+.info{
+  position: absolute;
+  right: 0;
+  color: #353535;
+  font-size: 30rpx;
+}
+.page-foot{
+  margin-top: 50rpx;
+}
+.page-items{
+  width: 100%;
+  height: 200rpx;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  justify-content:center;
+  margin-bottom: 20rpx;
+}
+.page-items .page-yhc-item{
+  flex:1;/*任意元素都是等分*/
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  height: 100%;
+  text-align: center;
+}
+.page-items .page-yhc-item navigator{
+  width: 100%;
+  height: 100%;
+}
+.page-items .page-yhc-item navigator image{
+  margin-top: 28rpx;
+  width:90rpx;
+  height: 90rpx;
+  vertical-align:top;
+}
+.page-items .page-yhc-item navigator view{
+  font-size:28rpx;
+  color:#666666;
+}
+.adsecs{
+  background:rgba(254,242,242,1);
+}
+.adsec{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0rpx auto;
+  background:rgba(254,242,242,1);
+  border-radius:6px;
+  padding: 7rpx 10rpx;
+  height: 50rpx;
+}
+.adsec icon{
+  display: flex;
+  margin-right: 10rpx;
+}
+.adsec icon image{
+  height: 55rpx;
+  width: 55rpx;
+}
+.fs_26{
+  display: block;
+  width: 100rpx;
+  color: #d81e06;
+}
+.swiper_container {
+  height: 55rpx;
+  width: 80%;
+  line-height: 55rpx;
+  padding-left: 10rpx;
+}
+
+.swiper_item {
+  font-size: 25rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+.weui-cell_primary_view{
+  color:#999999;font-size:26rpx;padding-left:16rpx;
+}
+.weui-cell__ft-active{
+  color:#7daae5;
+}
+.weui-cells_noline:after{
+  border: none;
+}
+.swiper_background{
+  padding:30rpx 0 50rpx 0;
+  height: 200rpx;
+}
+.swiper-item_background{
+  width:48% !important;
+  height: 100%;
+}
+.swiper-item_background_out{
+  width:100%;
+  height: 100%;
+}
+.swiper-item_background_in{
+  display: block;
+  height: 100%;
+  margin: 0 20rpx;
+  border-radius: 12rpx;
+  -moz-box-shadow:1px 1px 5px #888888; 
+  -webkit-box-shadow:1px 1px 5px #888888; 
+  box-shadow:1px 1px 5px #888888;
+  text-align: center;
+}
+.swiper-item_background_in_view{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-top: -60rpx;
+  margin-left: -90rpx;
+}
+.weui-flex{
+  padding: 0 10rpx;
+}
+.weui-flex__item{
+  background-color: #f7f7f7;
+  margin: 20rpx 10rpx;
+}
