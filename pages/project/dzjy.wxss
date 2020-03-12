@@ -1,0 +1,5 @@
+/* pages/project/jxxm.wxss */
+@import './index.wxss';
+.page__bd{
+  margin-top:0; 
+}

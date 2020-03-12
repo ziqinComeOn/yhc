@@ -1,4 +1,6 @@
 //app.js
+var https = require('./utils/https.js')
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,5 +37,14 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  reqGetfunc: {
+    reqGet: https.reqGet
+  },
+  reqPostfunc: {
+    reqPost: https.reqPost
+  },
+  reqMessfunc: {
+    reqMessPost: https.reqMessPost
   }
 })

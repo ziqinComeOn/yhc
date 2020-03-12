@@ -1,2 +1,177 @@
-<!--pages/project/index.wxml-->
-<text>pages/project/index.wxml</text>
+<view class="tabNav">
+  <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}">
+    <text>{{item}}</text>
+  </view>
+</view>
+<!-- <view class="orderInfo">
+  <view class="orderInfo-item" wx:for="{{sendList}}" wx:key="index"> 
+  这是内容{{item.content}}
+   </view>  
+</view>-->
+<view class="page__bd" style="display:{{currentTab==0?'':'none'}};">
+
+  <view class="weui-cellss weui-cells_after-title" wx:if="{{!sendList}}">
+    <view class="find_result">
+      <image src="../../images/find_result.png"></image>
+      <view style="color:#888888;">这里是空的哦~</view>
+    </view>
+  </view>
+  <view class="weui-cells_yhc weui-cells_after-title" wx:else>
+    <view class="weui-cell_yhc" wx:for="{{sendList}}" wx:key="index" bindtap="bindBillDetail" data-item="{{item}}" data-current-tab="{{currentTab}}">
+      <!-- 大宗交易start -->
+      <view class="weui-panel">
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+              <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                  大宗每日行情
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view class="weui-cell_primary_view">2020-03-09</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access weui-cell__ft-active">
+                  更多
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+
+        <swiper class="swiper_background" indicator-dots="{{indicatorDotss}}" autoplay="{{autoplays}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="20rpx" next-margin="40rpx">
+          <swiper-item class="swiper-item_background">
+            <view class="swiper-item_background_in {{item}}">
+              <view class="swiper-item_background_in_view">
+                <view>17.74</view>
+                <view>成交金额</view>
+              </view>
+            </view>
+          </swiper-item>
+          <swiper-item class="swiper-item_background">
+            <view class="swiper-item_background_in {{item}}">
+              <view class="swiper-item_background_in_view">
+                <view>44单</view>
+                <view>成交单数</view>
+              </view>
+            </view>
+          </swiper-item>
+        </swiper>
+        <view class="page__bd_spacing">
+          <view class="weui-flex__item">
+            <view class="placeholder">搜于特</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="placeholder">圆通速递</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="placeholder">正邦科技</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="placeholder">大北农</view>
+          </view>
+        </view>
+      </view>
+      <!-- 大宗交易end -->
+      <!-- <view class="weui-cell__bd">{{item.tradetype}}
+        <text style="font-size:24rpx;color:#AAAAAA;">\n{{item.date_2}}</text>
+      </view>
+      <view class="weui-cell__ft" style="color:#000000;" wx:if="{{currentTab==0}}">+{{item.cashfee}}
+        <text style="font-size:24rpx;color:#888888">\n累计{{item.add_up}}</text>
+      </view>
+      <view class="weui-cell__ft" style="color:#000000;" wx:else>-{{item.cashfee}}
+        <text style="font-size:24rpx;color:#888888">\n累计{{item.add_up}}</text>
+      </view> -->
+    </view>
+    <!-- 列表 start-->
+    <view class="page-section weui-cell_yhc">
+      <view class="weui-panel">
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg ">
+              <navigator url="../project/dzjy" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                  一手大宗
+                </view>
+                <view class="weui-cell__bd weui-cell_primary">
+                  <view class="weui-cell_primary_view">一手/靠谱</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access weui-cell__ft-active">
+                  更多
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-panel__bd">
+          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">游族网络
+                <text class="gupiao_code">[002174]</text>
+                <text class="gupiao_style">一手</text>
+              </view>
+              <view class="weui-media-box__desc">传媒-移动互联网服务</view>
+              <view class="weui-media-box__yhc">
+                <view class="weui-media-box__yhc-item">卖出价格<text>88.00%</text><text>市价</text></view>
+                <view class="weui-media-box__yhc-item">卖出数量<text>40</text><text>万股</text></view>
+              </view>
+            </view>
+            
+          </navigator>
+          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">游族网络
+                <text class="gupiao_code">[002174]</text>
+                <text class="gupiao_style">一手</text>
+              </view>
+              <view class="weui-media-box__desc">传媒-移动互联网服务</view>
+              <view class="weui-media-box__yhc">
+                <view class="weui-media-box__yhc-item">卖出价格<text>88.00%</text><text>市价</text></view>
+                <view class="weui-media-box__yhc-item">卖出数量<text>40</text><text>万股</text></view>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <!-- 列表end -->
+  </view>
+</view>
+
+<!-- 定向增发 start -->
+
+<!-- 定向增发 end -->
+
+<!-- 精选项目 start -->
+<view class="page__bd" style="display:{{currentTab==2?'':'none'}};">
+  <view class="weui-panel weui-panel_access">
+    <!-- <view class="weui-panel__hd">图文组合列表</view> -->
+    <view class="weui-panel__bd">
+      <navigator url="../project/jxxm" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="../../images/jingpin.png" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">可转债业务融资</view>
+          <view class="weui-media-box__desc">可转债业务融资</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="../../images/binggou.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">某科技公司融资</view>
+          <view class="weui-media-box__desc">某科技公司融资</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="weui-panel__ft">
+      <view class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd">查看更多</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 精选项目 end -->

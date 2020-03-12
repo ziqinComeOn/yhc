@@ -14,7 +14,7 @@
     </view>
     <view class="page-section page-items">
       <view class="page-yhc-item">
-        <navigator url="">
+        <navigator url="../project/dzjy">
           <image src="../../images/dzjy.png"></image>
           <view>大宗交易</view>
         </navigator>
@@ -26,9 +26,9 @@
         </navigator>
       </view>
       <view class="page-yhc-item">
-        <navigator url="">
-          <image src="../../images/dzjy.png"></image>
-          <view>大宗交易</view>
+        <navigator url="../project/jxxm">
+          <image src="../../images/jxxm.png"></image>
+          <view>精选项目</view>
         </navigator>
       </view>
       <view class="page-yhc-item">
@@ -62,7 +62,7 @@
         <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_small-appmsg">
             <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
-              <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+              <navigator url="../project/dzjy" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__hd">
                  大宗交易
                 </view>
@@ -99,7 +99,7 @@
         <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_small-appmsg">
             <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
-              <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+              <navigator url="../project/jxxm" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__hd">
                  精选一手项目
                 </view>
