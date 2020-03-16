@@ -4,6 +4,7 @@
     "pages/project/index",
     "pages/project/dzjy",
     "pages/project/jxxm",
+    "pages/project/dz_detail",
     "pages/my/my",
     "pages/logs/logs"
   ],

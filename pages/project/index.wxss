@@ -133,10 +133,11 @@
   font-size: 28rpx;
 }
 .gupiao_style{
-  font-size: 24rpx;
+  font-size: 20rpx;
+  height: 40rpx;
   margin-left:20rpx;
   background: #dac086;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   color:#FFFFFF;
   padding: 4rpx 10rpx;
 }

@@ -1,0 +1,51 @@
+@import '../../utils/same.wxss';
+.weui-panel__hd{
+  color:red;
+}
+.weui-cell_primary_view{
+  font-size:28rpx;
+  color: #999999;
+}
+.shoucang_d{
+  font-size: 24rpx;
+  color:#999999;
+}
+.weui-cell__ft-active{
+  font-size: 28rpx;
+  color:#666666;
+}
+.weui-cell_access_background:nth-child(odd){
+  background:#faf9fe;
+}
+.weui-cell_yhc_tag{
+  padding:0 30rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  justify-content:space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.gupiao_style{
+  font-size: 24rpx;
+  height: 60rpx;
+  margin-left:20rpx;
+  background: #dac086;
+  border-radius: 30rpx;
+  color:#FFFFFF;
+  padding: 4rpx 10rpx;
+}
+.weui-cell_yhc_tag-item_inblock{
+  display: inline-block;
+}
+.weui-cell_yhc_tag-item-txt{
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  color:#888888;
+}
+

@@ -3,11 +3,12 @@
     <view class="page__bd">
       <view class="weui-panel">
         <view class="weui-panel__bd">
-          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <navigator url="../project/dz_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">游族网络
                 <text class="gupiao_code">[002174]</text>
                 <text class="gupiao_style">一手</text>
+                <text class="gupiao_style">流通股</text>
               </view>
               <view class="weui-media-box__desc">传媒-移动互联网服务</view>
               <view class="weui-media-box__yhc">
@@ -16,7 +17,7 @@
               </view>
             </view>
           </navigator>
-          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <navigator url="../project/dz_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">游族网络
                 <text class="gupiao_code">[002174]</text>

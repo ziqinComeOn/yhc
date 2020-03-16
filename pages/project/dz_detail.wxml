@@ -1,0 +1,264 @@
+<view class="page">
+    <view class="page__bd" style="border-bottom:20rpx solid #faf9fe;">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_noline">
+                  <view class="weui-cell__hd">
+                  游族网络
+                  </view>
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">[002174]</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    <image style="width:48rpx;height:48rpx;" src="../../images/shoucang.png"></image>
+                  </view>
+                  <view class="shoucang_d">228</view>
+                </view>
+                <view class="weui-cell_yhc_tag">
+                  <view class="weui-cell_yhc_tag-item">
+                    <text class="gupiao_style">一手</text>
+                    <text class="gupiao_style">流通股</text>
+                  </view>
+                  <view class="weui-cell_yhc_tag-item">
+                    <view class="weui-cell_yhc_tag-item_inblock">
+                      <image src="../../images/view.png" style="width:48rpx;height:48rpx;"></image><text class="weui-cell_yhc_tag-item-txt">30</text>
+                    </view>
+                    
+                  </view>
+                  
+                </view>
+
+
+              </view>
+            </view>
+          </view>
+        </view>   
+    </view>
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__hd">详细信息</view>
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <!-- <view class="weui-cell__hd">
+                  游族网络
+                  </view> -->
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">项目名称</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    **股份大股东减持
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">是否国有</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    否
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">股票名称/代码</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    02****
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">股票来源</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    首发
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">出让方</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    某股东
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">出让方持股数量</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    500万股
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">本次出让股份数量</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    500万股
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">前一交易收盘价</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    34元
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">持股金额</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    17000万元
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">折扣率</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    91折
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">交易日期</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    随时
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">签约地点</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    上海
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>   
+    </view>
+
+    <view class="page__bd">
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">居间人信息</view>
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">是否一手项目</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    是
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">是否能直接对接企业</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    是
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">直接对接企业人员</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    财富部
+                  </view>
+                </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>  
+
+
+    <view class="page__bd">
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">项目描述</view>
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">**股份大宗交易减持</view>
+                  </view>
+                </view>
+                
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> 
+
+    <view class="page__bd">
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">项目亮点</view>
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">绩优股，折扣低</view>
+                  </view>
+                </view>
+                
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> 
+
+    <view class="page__bd">
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">增信措施</view>
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">买断</view>
+                  </view>
+                </view>
+                
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> 
+
+    <view class="page__bd">
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">咨询信息</view>
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">我有意愿，点击质咨询</view>
+                  </view>
+                </view>
+                
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>   
+
+
+</view>
