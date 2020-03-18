@@ -1,0 +1,75 @@
+<view class="page">
+    <!-- <view class="page__bd" style="padding:32rpx;">
+        <view class="page-section">
+          <view class="page-section-title">认证说明：</view>
+          <view class="textarea-wrp" style="margin:0 auto;">
+            <textarea bindblur="bindTextAreaBlur" auto-focus="true" style="height: 9em;border:2rpx solid #eee;width:100%;" />
+          </view>
+        </view>
+    </view>     -->
+    <view class="page__bd" style="padding:32rpx;">
+      <view style="height:100rpx;line-height:100rpx;">
+        <image style="width:100rpx;height:100rpx;vertical-align:middle;" src="../../images/phone.png"></image><text style="padding-left:10rpx;">手机号</text>
+        <button  style="width:320rpx;height:90rpx;vertical-align:middle;float:right;display:{{hasButton?'block':'none'}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权绑定手机号</button>
+        <button  style="width:320rpx;height:90rpx;vertical-align:middle;float:right;display:{{hasPhoneNum?'block':'none'}}">{{phoneNum}}</button>
+      </view>
+    </view>
+
+    <view class="weui-msg__text-area">
+        <view class="weui-msg__desc">为保证注册用户真实性，需要进行人工审核，才可以显示已认证，认证需要缴纳人工费5元，如需认证，请点击<navigator url="javascript:void(0);" bindtap="bindCertified" class="weui-msg__link">去认证</navigator>。</view>
+    </view>
+
+    <view class="page__bd">
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__hd">
+                          <view class="weui-uploader__overview">
+                              <view class="weui-uploader__title">认证照片</view>
+                              <!-- <view class="weui-uploader__info">{{files.length}}/2</view> -->
+                          </view>
+                          <view class="weui-uploader__tips">
+                            上传提示
+                          </view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                            <view class="weui-uploader__files" id="uploaderFiles">
+                                <block wx:for="{{files}}" wx:key="*this">
+                                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                                    </view>
+                                </block>
+                                <!-- <view class="weui-uploader__file">
+                                    <image class="weui-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                                </view>
+                                <view class="weui-uploader__file">
+                                    <image class="weui-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                                </view> -->
+                                <!-- <view class="weui-uploader__file weui-uploader__file_status">
+                                    <image class="weui-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                                    <view class="weui-uploader__file-content">
+                                      <view class="weui-loading"></view>
+                                    </view>
+                                </view>
+                                <view class="weui-uploader__file weui-uploader__file_status">
+                                    <image class="weui-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                                    <view class="weui-uploader__file-content">
+                                        <icon type="warn" size="23" color="#F43530"></icon>
+                                    </view>
+                                </view>
+                                <view class="weui-uploader__file weui-uploader__file_status">
+                                    <image class="weui-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                                    <view class="weui-uploader__file-content">50%</view>
+                                </view> -->
+                            </view>
+                            <view class="weui-uploader__input-box">
+                                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,71 @@
+<view class="container">
+  <view class="container_nei" style="display:{{onePart?'':'none'}}">
+    <view class="title-hd font-color-999">
+      <view class="cardBox-hd font-color-666">
+        <text class="point"></text>基本信息</view>
+        <view class="cardBox-phone">
+          <view class="cardBox-phone-item">
+            <text>真实姓名</text>
+            <input type="text" bindinput="bindnickname" value="{{nickname}}"></input>
+          </view>
+          <view class="cardBox-phone-item">
+            <text>手机号码</text>
+            <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="display:{{hasButton?'':'none'}}">授权绑定</button>
+            <button style="display:{{hasPhoneNum?'':'none'}}">{{phoneNum}}</button>
+          </view>
+        </view>
+      
+    </view>
+    <view class="idCard-box">
+      <view class="cardBox-hd font-color-666">
+        <text class="point"></text>上传身份证</view>
+      <view class="cardBox-bd">
+        <image class="img1" src="{{file1?file1:chooseImage1}}" bindtap="chooseImage" data-ids="1"></image>
+        <!-- <image class="img2" src="/assets/images/IDcard_front.png"></image> -->
+        <view class="img2">
+          <text>上传身份证人像面\n</text>
+          <view class="text"><text>请保持照片中身份证显示完整字体清晰可见</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="idCard-box">
+      <!-- <view class="cardBox-hd font-color-666">身份证照片(背面)</view> -->
+      <view class="cardBox-bd">
+        <image class="img1" src="{{file2?file2:chooseImage2}}" bindtap="chooseImage" data-ids="2"></image>
+        <!-- <image class="img2" src="/assets/images/IDcard_front.png"></image> -->
+        <view class="img2">
+          <text>上传身份证国徽面\n</text>
+          <view class="text"><text>请保持照片中身份证显示完整字体清晰可见</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="butbox" style="margin:40rpx auto 30rpx;" style="display:{{onePart?'':'none'}}" bindtap="bindnext">
+    <navigator class="but bg-color-c24e4e font-color-white" url="javascript:void(0)">下一步</navigator>
+  </view>
+
+  <view class="container_nei" style="display:{{twoPart?'':'none'}}">
+    <view class="idCard-box">
+      <view class="cardBox-hd font-color-666">
+        <text class="point"></text>上传毕业证</view>
+      <view class="cardBox-bd">
+        <image class="img1" src="{{file3?file3:chooseImage3}}" bindtap="chooseImage" data-ids="3"></image>
+        <!-- <image class="img2" src="/assets/images/IDcard_front.png"></image> -->
+        <view class="img2">
+          <text>上传学信网二维码\n</text>
+          <view class="text"><text>此项只针对大学学历用户上传，其他用户可不传</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="title-hd font-color-999 idCard-box idCard-tip">
+        <text>1、提交审核需缴纳5元审核费</text>
+        <text>2、未点击提交审核，照片材料不会上传</text>
+        <text>3、人工客服电话0530-666888</text>
+    </view>
+  </view>
+
+  <view class="butbox" style="margin:40rpx auto 30rpx; " style="display:{{twoPart?'':'none'}}" bindtap="bindCertified">
+    <navigator class="but bg-color-c24e4e font-color-white" url="submitVerification">提交审核</navigator>
+  </view>
+</view>

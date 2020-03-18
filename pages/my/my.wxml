@@ -1,2 +1,143 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="my-wrapper">
+  <view class="avatar-wrapper">
+    <view class="userinfo">
+      <view class="userinfo-containers" style="display:{{hasUserInfoLogin?'block':'none'}}">
+       <view class="image-border">
+          <image class="userinfo-avatar" src="../../images/default.png" mode="cover"></image>
+        </view>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="button_1"> 授权登录 </button>
+      </view>
+
+      <view class="userinfo-container" style="display:{{hasUserInfo?'block':'none'}}">
+        <view class="image-border">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+        </view>
+        <view class="nickname-border">
+          <text class="userinfo-nickname">{{nickname}}</text>
+          <view class="userinfo-gender">
+            <view class="text textactives">
+              <image wx:if="{{sex==0}}" data-id="0" src="{{genderImage[0]['genderImagePath0']}}"></image>
+              <image wx:elif="{{sex==1}}" data-id="1" src="{{genderImage[1]['genderImagePath1']}}"></image>
+              <image wx:else="{{sex==2}}" data-id="2" src="{{genderImage[2]['genderImagePath2']}}"></image>
+              <text>{{age}}</text>
+            </view>
+            <view class="text {{isaut==2?'textactive':''}}">
+              <image wx:if="{{isaut==2}}" src="../../images/confirm.png"></image>
+              <image wx:else src="../../images/no-confirm.png"></image>
+              <block wx:if="{{isaut==0}}">未认证</block>
+              <block wx:elif="{{isaut==1}}">认证中</block>
+              <block wx:elif="{{isaut==2}}">已认证</block>
+            </view>
+          </view>
+        </view>
+        <view class="userinfo_edit" bindtap="bindEdit">
+          <view class="weui-cell__ft weui_edit">编辑资料</view>
+          <!-- <view style="width:80rpx;height:80rpx;margin-left:20rpx;">
+            <image src="../../images/edit.png" style="height:100%;width:100%;"></image>
+          </view> -->
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="weui-panel">
+    
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_small-appmsg">
+        <view class="weui-cells weui-cells_in-small-appmsg">
+          <navigator url="{{is_status?url19:''}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="{{icon19}}" style="width: 20px;height: 20px;margin-right: 16px;vertical-align:middle;" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>钱包</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access weui-cell_actives">{{money_num}}</view>
+          </navigator>
+
+          <navigator url="{{is_status?url20:''}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image wx:if="{{isaut==2}}" src="{{icon200}}" style="width: 20px;height: 20px;margin-right: 16px;vertical-align:middle;" />
+              <image wx:else src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 16px;vertical-align:middle;" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>认证</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">
+              <block wx:if="{{isaut==0}}">去认证</block>
+              <block wx:elif="{{isaut==1}}">认证中</block>
+              <block wx:else="{{isaut==2}}">已认证</block>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_small-appmsg">
+        <view class="weui-cells weui-cells_in-small-appmsg">
+          <navigator url="{{url24}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="{{icon24}}" style="width: 20px;height: 20px;margin-right: 16px;vertical-align:middle;" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>设置</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <navigator url="{{url21}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="{{icon21}}" style="width: 20px;height: 20px;margin-right: 16px;vertical-align:middle;" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>帮助反馈</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+
+          <navigator url="{{url22}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="{{icon22}}" style="width: 20px;height: 20px;margin-right: 16px;vertical-align:middle;" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>用户协议</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+
+          <navigator url="{{url23}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="{{icon23}}" style="width: 20px;height: 20px;margin-right: 16px;vertical-align:middle;" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>关于我们</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="btn" bindtap="powerDrawer" data-statu="open">button</view> -->
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <!-- <image src="../../images/logoa.png"></image> -->
+  <!--drawer content-->
+  <view class="drawer_title">用户协议</view>
+  <view class="drawer_content">
+    <view class="top grid">
+      <label class="title">请仔细阅读并充分理解相关条款，在确认充分理解并同意后使用本程序相关产品或服务。点击同意即代表您已阅读并同意<text bindtap="toAgreement">《用户协议》</text>、<text bindtap="toPrivacyAgreement">《隐私协议》</text>，如果您不同意，将可能影响使用本程序的产品和服务。</label>
+    </view>
+    <view class="top bottom grid">
+      <label class="title">我们将按法律法规要求，采取相应安全保护措施，全力保护您的个人隐私安全可控。</label>
+    </view>
+  </view>
+   <view class="btn_ok" bindtap="powerDrawer" data-statu="close">同意</view>
+  <view class="btn_ok btn_cacel" bindtap="powerDrawer" data-statu="close">取消</view>
+</view>

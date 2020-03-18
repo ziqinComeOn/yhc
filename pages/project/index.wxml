@@ -23,7 +23,7 @@
         <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_small-appmsg">
             <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
-              <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+              <navigator url="#" class="weui-cell weui-cell_example weui-cell_access" hover-class="none">
                 <view class="weui-cell__hd">
                   大宗每日行情
                 </view>

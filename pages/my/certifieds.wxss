@@ -1,0 +1,123 @@
+/* pages/my/certifieds.wxss */
+page{
+  background: #90CBC7;
+}
+.container{
+  margin:40rpx 40rpx 0rpx;
+  padding:0;
+}
+.container_nei{
+  width: 100%;
+  background:#FFFFFF;
+  border-top-left-radius:40rpx;
+  border-bottom-right-radius:40rpx;
+}
+.title-hd{
+    display: flex;
+    padding:30rpx;
+    padding-bottom:0;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1
+}
+.idCard-box{
+    display: flex;
+    padding: 20rpx 30rpx;
+    flex-direction: column;
+    /* background-color: #fff; */
+    margin-bottom: 20rpx;
+}
+.cardBox-hd{
+  line-height: 70rpx;
+  color:#333333;
+  font-size:36rpx;
+}
+.point{
+  display: inline-block;
+  width:20rpx;
+  height: 20rpx;
+  background: #90CBC7;
+  border-radius: 50%;
+  border:6rpx solid #ADD8E6;
+  line-height: 70rpx;
+  margin-right:10rpx; 
+}
+.cardBox-phone{
+  height: auto;
+}
+.cardBox-phone-item{
+  padding-left:40rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.cardBox-phone-item-phon text{
+  font-size:28rpx;
+  color:#999999;
+}
+.cardBox-phone-item input,button{
+  border-bottom:2rpx solid #90CBC7;
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  border:outline;
+  width: 400rpx;
+  text-align: center;
+}
+.cardBox-phone-item button{
+  background: #FFFFFF;
+  border:outline;
+  font-size:28rpx;
+}
+.cardBox-phone-item button::after{
+  border:none;
+}
+.cardBox-bd {
+     display: flex;
+     flex-direction: row;
+     align-items: center; 
+     padding-top: 20rpx;
+}
+.cardBox-bd .img1{
+    width: 328rpx;
+    height: 196rpx;
+    margin: 0rpx 20rpx 0 30rpx;
+}
+.cardBox-bd .img2{
+    width: 220rpx;
+    height:180rpx;
+}
+.ft-title{
+    padding:20rpx 30rpx 0;
+}
+
+.img2 text{
+  font-size:24rpx;
+  color:#666666;
+}
+.img2 .text{
+  line-height: 26rpx;
+  padding-top: 10rpx;
+}
+.img2 .text text{
+  font-size:20rpx;
+  color:#999999;
+}
+.idCard-tip text{
+  padding-left:40rpx;
+  line-height: 60rpx;
+  font-size:24rpx;
+}
+.butbox{
+  margin-top: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+  background-color:rgb(41, 110, 106);
+  color:#FFFFFF;
+  font-size:28rpx;
+  text-align: center;
+  border-top-left-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+}

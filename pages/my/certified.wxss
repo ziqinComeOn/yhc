@@ -1,0 +1,11 @@
+@import '../../utils/same.wxss';
+
+.weui-cells:before,.weui-cells:after {
+  border:0;
+}
+button{
+  line-height: 110rpx;
+  background: #90CBC7;
+  color:#FFFFFF;
+  line-height: 90rpx;
+}
