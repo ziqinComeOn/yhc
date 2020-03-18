@@ -1,10 +1,19 @@
 @import '../../utils/same.wxss';
+.page__bd{
+  border-bottom:20rpx solid #faf9fe;
+}
 .weui-panel__hd{
-  color:red;
+  font-size:30rpx;
+  color:#333333;
+  font-weight: 700;
 }
 .weui-cell_primary_view{
   font-size:28rpx;
   color: #999999;
+}
+.weui-cell_primary_view_other{
+  font-size: 28rpx;
+  color:#666666;
 }
 .shoucang_d{
   font-size: 24rpx;
@@ -39,7 +48,12 @@
   padding: 4rpx 10rpx;
 }
 .weui-cell_yhc_tag-item_inblock{
-  display: inline-block;
+  position: relative;
+}
+.weui-cell_yhc_tag-item_inblock image{
+  position: absolute;
+  left: -38rpx;
+  top: 15rpx;
 }
 .weui-cell_yhc_tag-item-txt{
   font-size: 24rpx;
@@ -48,4 +62,27 @@
   height: 80rpx;
   color:#888888;
 }
-
+.goods-fixed-icon text {
+    /* color: #fff; */
+    /* font-size: 22rpx; */
+    text-align: center;
+    display: block;
+    position: absolute;
+    left:58rpx;
+    top:20rpx;
+}
+.goods-fixed-icon button{
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 144rpx !important;
+  opacity: 0;
+  z-index: 99;
+}
+.weui-cell:before{
+  border-top:none;
+}
+.weui-cell:after{
+  border-top:none;
+}

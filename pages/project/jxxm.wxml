@@ -4,7 +4,7 @@
     <view class="weui-panel weui-panel_access">
       <!-- <view class="weui-panel__hd">图文组合列表</view> -->
       <view class="weui-panel__bd">
-        <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <navigator url="../project/jx_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
             <image class="weui-media-box__thumb" src="../../images/jingpin.png" />
           </view>
@@ -13,7 +13,7 @@
             <view class="weui-media-box__desc">可转债业务融资</view>
           </view>
         </navigator>
-        <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <navigator url="../project/jx_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
             <image class="weui-media-box__thumb" src="../../images/binggou.jpg" />
           </view>

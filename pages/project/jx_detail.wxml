@@ -1,0 +1,92 @@
+<scroll-view bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-y="true" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__bd">
+            <navigator url="#" class="weui-media-box weui-media-box_appmsg" hover-class="none">
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">材料制作企业并购基金</view>
+                <view class="weui-media-box__desc">2020-03-18</view>
+              </view>
+            </navigator>
+          </view>
+        </view>   
+    </view>
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+          <!-- <view class="weui-panel__hd">详细信息</view> -->
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_small-appmsg">
+              <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <!-- <view class="weui-cell__hd">
+                  游族网络
+                  </view> -->
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">所属行业</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    材料制造
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">借款期限</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    2+1年
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">融资规模</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    5亿元
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">使用用途</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    新项目投资，日常企业经营
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_top weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">简要说明</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    拟成立并购基金，融资公司提供增信措施
+                  </view>
+                </view>
+                
+              </view>
+            </view>
+          </view>
+        </view>   
+    </view>
+
+    <!-- 底部操作栏 -->
+    <view class="footer-fixed f-30">
+      <view class="goods-fixed-icon">
+        <contact-button sessionFrom="weapp" size="27" style="opacity: 0;position:absolute;top:20rpx;left:20rpx;" type="default-light"></contact-button>
+        <text class="iconfont icon-kefu"></text>
+      </view>
+      <!-- <view bindtap="flowCart" class="goods-fixed-icon">
+        <text class="iconfont icon-shoucang1"></text>
+      </view> -->
+      <view bindtap="flowCart" class="goods-fixed-icon">
+        <button open-type="share"></button>
+        <text class="iconfont icon-fenxiang1"></text>
+      </view>
+      <view class="default-btn" bindtap="makeCall" style="wdata-typeth:100%" data-phone="15638748251">电话咨询</view>
+    </view>
+</view>
+</scroll-view>
+
+<!-- 返回顶部 -->
+<view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
+  <text class="iconfont icon-fanhuidingbu"></text>
+</view>

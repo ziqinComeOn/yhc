@@ -1,0 +1,6 @@
+@import '../../utils/same.wxss';
+.weui-article__h3{
+  font-weight: 700;
+  color:#333333;
+  font-size:28rpx;
+}

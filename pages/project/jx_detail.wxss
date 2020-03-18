@@ -1,0 +1,17 @@
+@import './dz_detail.wxss';
+
+.page__bd{
+  border-bottom:0rpx;
+}
+.page__bd:before{
+  border-top:none;
+}
+.weui-panel:before{
+  border-top:none;
+}
+.weui-cell_top{
+  -webkit-box-align: top !important; 
+  -webkit-align-items: top !important;
+  align-items: top !important;
+  height: 180rpx;
+}

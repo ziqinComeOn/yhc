@@ -1,11 +1,11 @@
-// pages/project/dz_detail.js
+// pages/article/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    floorstatus: false, // 返回顶部
+
   },
 
   /**
@@ -62,31 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  /**
-   * 返回顶部
-   */
-  goTop: function (t) {
-    this.setData({
-      scrollTop: 0
-    });
-  },
-
-  /**
-   * 显示/隐藏 返回顶部按钮
-   */
-  scroll: function (e) {
-    this.setData({
-      floorstatus: e.detail.scrollTop > 200
-    })
-  },
-  /**
-   * 打电话
-   */
-  makeCall:function(e){
-    let phone_number = e.target.dataset.phone
-    wx.makePhoneCall({
-      phoneNumber: phone_number //仅为示例，并非真实的电话号码
-    })
   }
 })

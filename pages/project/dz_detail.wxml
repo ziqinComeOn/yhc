@@ -1,5 +1,6 @@
+<scroll-view bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-y="true" style="position:absolute; top:0; left:0; right:0; bottom:0;">
 <view class="page">
-    <view class="page__bd" style="border-bottom:20rpx solid #faf9fe;">
+    <view class="page__bd" style="">
         <view class="weui-panel weui-panel_access">
           <view class="weui-panel__bd">
             <view class="weui-media-box weui-media-box_small-appmsg">
@@ -174,7 +175,7 @@
                     <view class="weui-cell_primary_view">直接对接企业人员</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    财富部
+                    财务部
                   </view>
                 </view>
             </view>
@@ -193,7 +194,7 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view">**股份大宗交易减持</view>
+                    <view class="weui-cell_primary_view weui-cell_primary_view_other">**股份大宗交易减持</view>
                   </view>
                 </view>
                 
@@ -212,7 +213,7 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view">绩优股，折扣低</view>
+                    <view class="weui-cell_primary_view weui-cell_primary_view_other">绩优股，折扣低</view>
                   </view>
                 </view>
                 
@@ -231,7 +232,7 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view">买断</view>
+                    <view class="weui-cell_primary_view weui-cell_primary_view_other">买断</view>
                   </view>
                 </view>
                 
@@ -260,5 +261,30 @@
       </view>
     </view>   
 
+    <!-- 底部操作栏 -->
+    <view class="footer-fixed f-30">
+      <view class="goods-fixed-icon">
+        <contact-button sessionFrom="weapp" size="27" style="opacity: 0;position:absolute;top:20rpx;left:20rpx;" type="default-light"></contact-button>
+        <!-- <image class="flow-img" src="../../images/kefu.png"></image> -->
+        <text class="iconfont icon-kefu"></text>
+      </view>
+      <view bindtap="flowCart" class="goods-fixed-icon">
+        <!-- <image class="flow-img" src="../../images/flow.png"></image>
+        <view class="flow_num" wx:if="{{cart_total_num > 0}}">
+          <text>{{cart_total_num}}</text>
+        </view> -->
+        <text class="iconfont icon-shoucang1"></text>
+      </view>
+      <view bindtap="flowCart" class="goods-fixed-icon">
+        <button open-type="share"></button>
+        <text class="iconfont icon-fenxiang1"></text>
+      </view>
+      <view class="default-btn" bindtap="makeCall" style="wdata-typeth:100%" data-phone="15638748251">一键咨询</view>
+    </view>
+</view>
+</scroll-view>
 
+<!-- 返回顶部 -->
+<view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
+  <text class="iconfont icon-fanhuidingbu"></text>
 </view>

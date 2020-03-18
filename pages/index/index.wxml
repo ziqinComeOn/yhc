@@ -99,7 +99,7 @@
         <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_small-appmsg">
             <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
-              <navigator url="../project/jxxm" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+              <navigator url="../project/jxxm" class="weui-cell weui-cell_example weui-cell_access" hover-class="none">
                 <view class="weui-cell__hd">
                  精选一手项目
                 </view>
@@ -115,7 +115,7 @@
         </view>
         
         <view class="weui-panel__bd">
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <navigator url="../project/jx_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                         <image class="weui-media-box__thumb" src="{{icon1}}" />
                     </view>
@@ -124,7 +124,7 @@
                         <view class="weui-media-box__desc">材料制作企业并购基金</view>
                     </view>
                 </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <navigator url="../project/jx_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                         <image class="weui-media-box__thumb" src="{{icon2}}" />
                     </view>
@@ -143,7 +143,7 @@
         <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_small-appmsg">
             <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
-              <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+              <navigator url="#" class="weui-cell weui-cell_example weui-cell_access" hover-class="none">
                 <view class="weui-cell__hd">
                  金融知识
                 </view>
@@ -160,7 +160,7 @@
         <view class="page__bd page__bd_spacing">
           <view class="weui-flex">
             <view class="weui-flex__item">
-              <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+              <navigator url="../article/index" class="weui-media-box weui-media-box_appmsg" hover-class="none">
                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                         <view class="weui-media-box__title">玩转定增</view>
                         <view class="weui-media-box__desc">定增的投资机会</view>
@@ -168,7 +168,7 @@
                 </navigator>
             </view>
             <view class="weui-flex__item">
-              <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+              <navigator url="../article/index_1" class="weui-media-box weui-media-box_appmsg" hover-class="none">
                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                         <view class="weui-media-box__title">启航大宗</view>
                         <view class="weui-media-box__desc">大宗交易</view>
@@ -176,7 +176,7 @@
                 </navigator>
             </view>
             <view class="weui-flex__item">
-              <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+              <navigator url="../article/index_2" class="weui-media-box weui-media-box_appmsg" hover-class="none">
                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
                         <view class="weui-media-box__title">可转债简析</view>
                         <view class="weui-media-box__desc">一文读懂可转债</view>

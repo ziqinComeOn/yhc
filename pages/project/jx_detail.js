@@ -83,7 +83,7 @@ Page({
   /**
    * 打电话
    */
-  makeCall:function(e){
+  makeCall: function (e) {
     let phone_number = e.target.dataset.phone
     wx.makePhoneCall({
       phoneNumber: phone_number //仅为示例，并非真实的电话号码

@@ -5,6 +5,10 @@
     "pages/project/dzjy",
     "pages/project/jxxm",
     "pages/project/dz_detail",
+    "pages/project/jx_detail",
+    "pages/article/index",
+    "pages/article/index_1",
+    "pages/article/index_2",
     "pages/my/my",
     "pages/logs/logs"
   ],
