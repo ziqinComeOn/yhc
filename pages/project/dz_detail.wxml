@@ -279,7 +279,7 @@
         <button open-type="share"></button>
         <text class="iconfont icon-fenxiang1"></text>
       </view>
-      <view class="default-btn" bindtap="makeCall" style="wdata-typeth:100%" data-phone="15638748251">一键咨询</view>
+      <view class="default-btn" bindtap="makeCall" style="wdata-typeth:100%" data-phone="15638748251" data-integral="6">一键咨询</view>
     </view>
 </view>
 </scroll-view>

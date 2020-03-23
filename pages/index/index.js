@@ -22,6 +22,15 @@ Page({
       { url: "url", title: "恭喜xxx完成任务退回300进入领奖区" }]
   },
   onLoad:function(){
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 10000
+    })
+    setTimeout(function () {
+      wx.hideToast()
+    }, 2000)
+    
     this.setData({
       icon1:'../../images/binggou.jpg',
       icon2:'../../images/jingpin.png',

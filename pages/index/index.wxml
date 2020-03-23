@@ -5,7 +5,7 @@
         <block wx:for="{{background_image}}" wx:key="*this">
           <swiper-item>
             <!-- <view class="swiper-item {{item}}"></view> -->
-            <navigator class="swiper-item" url="">
+            <navigator class="swiper-item" url="../article/lb_detail">
               <image src="{{item}}"></image>
             </navigator>
           </swiper-item>

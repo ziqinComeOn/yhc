@@ -1,0 +1,135 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">启航大宗</view>
+            <view class="weui-article__section">
+                <view class="weui-article__h2">大宗交易</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">一、 定义</view>
+                    <view class="weui-article__p">
+                        大宗交易(block trading),又称为大宗买卖，是指达到规定的最低限额的证券单笔买卖申报，买卖双方经过协议达成一致并经交易所确定成交的证券交易。具体来说，各个交易所在它的交易制度中或者在它的大宗交易制度中都对大宗交易有明确的界定，而且各不相同。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">二、大宗交易规定：
+</view>
+                    <view class="weui-article__p">
+                        上交所规定（2015年最新修订版）：
+                      
+                      <text>\n 1、A股单笔买卖申报数量在30万股（含）以上，或交易金额在200万元（含）人民币以上；B股( 上海)单笔买卖申报数量在30万股（含）以上，或交易金额在20万美元（含）以上；</text>
+
+                      <text>\n2、基金大宗交易的单笔买卖申报数量在200万份（含）以上，或交易金额在200万元（含）人民币以上；</text>
+
+                      <text>\n3、国债及债券回购大宗交易的单笔买卖申报数量在10000手（含）以上，或交易金额在1000万元（含）人民币以上。</text>
+
+                      <text>\n4、其他债券单笔买卖申报数量在1000手（含）以上，或交易金额在100万元（含）人民币以上。（企业债、公司债的现券和回购大宗交易单笔最低限额在原来基础上降低至：交易数量在1000手（含）以上，或交易金额在100万元（含）人民币以上。参考《关于开展大宗债券双边报价业务及调整大宗交易有关事项的通知》）</text>
+
+                      <text>\n5、其他债券单笔买卖申报数量应当不低于1000手，或者交易金额不低于100万元人民币。</text>
+
+                      <text>\n上海证券交易所每个交易日接受大宗交易申报的时间分别为：</text>
+
+                      <text>\n（一）9:30至11:30、13:00至15:30接受意向申报；</text>
+
+                      <text>\n（二）9:30至11:30、13:00至15:30、16:00至17:00接受成交申报；</text>
+
+                      <text>\n（三）15：00至15：30接受固定价格申报。</text>
+
+                      <text>\n交易日的15:00仍处于停牌状态的证券，本所当日不再接受其大宗交易的申报。每个交易日9:30至15:30时段确认的成交，于当日进行清算交收。每个交易日16:00至17:00时段确认的成交，于次一交易日进行清算交收。参考《上海证券交易所交易规则》（2015年修订）</text>
+                      <text>\n深交所规定：</text>
+
+                      <text>\n1、A 股单笔交易数量不低于30 万股，或者交易金额不低于200 万元人民币；</text>
+
+                      <text>\n2、B 股单笔交易数量不低于 3万股，或者交易金额不低于20 万元港币；</text>
+
+                      <text>\n3、基金单笔交易数量不低于 200 万份，或者交易金额不低于 200 万元人民币；</text>
+
+                      <text>\n4、债券单笔交易数量不低于 5 千张，或者交易金额不低于50 万元人民币；</text>
+
+                      <text>\n深交所大宗交易采用协议大宗交易和盘后定价大宗交易方式。协议大宗交易，是指大宗交易双方互为指定交易对手方，协商确定交易价格及数量的交易方式。盘后定价大宗交易，是指证券交易收盘后按照时间优先的原则，以证券当日收盘价或证券当日成交量加权平均价格对大宗交易买卖申报逐笔连续撮合的交易方式。采用协议大宗交易方式的，接受申报的时间为每个交易日 9:15 至 11:30、13:00 至 15:30。采用盘后定价大宗交易方式的，接受申报的时间为每个交易日 15:05 至 15:30。当天全天停牌的证券，深交所不接受其大宗交易申报。</text>
+
+                      <text>\n有价格涨跌幅限制证券的协议大宗交易的成交价格，在该证券当日涨跌幅限制价格范围内确定。无价格涨跌幅限制证券的协议大宗交易的成交价格，在前收盘价的上下 30%之间确定。</text>
+
+                    </view>
+                </view>
+
+                 <view class="weui-article__section">
+                    <view class="weui-article__h3">三、传统大宗交易流程：
+
+</view>
+                    <view class="weui-article__p">
+                        <text>\n 拥有交易所专用席位的机构可通过该席位进行大宗交易，其他投资者进行大宗交易，应委托其办理指定交易的本所会员办理</text>
+
+                        <text>\n 联系开户证券公司的营业部（要求拥有交易所席位），并通过营业部的大宗交易系统报到交易所的系统。</text>
+                    </view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../images/qhdz_1.jpeg" mode="aspectFit" style="height:;width:100%;" /> 
+                    </view>
+
+                    <view class="weui-article__p">
+                        <text>\n 第一步</text>
+
+                        <text>\n 买卖双方事先协商，对大宗交易股票的价格、数量等相关事宜达成口头或书面协议。
+</text>
+                         <text>\n 第二步</text>
+
+                        <text>\n  确定交易日期，买卖双方向各自托管的证券营业部进行大宗交易申报。（交易软件内申报或邮件/传真给股票托管营业部申报）
+
+</text>
+                         <text>\n 大宗交易申报需要准备的内容包括：</text>
+
+                        <text>\n 1、买卖方向（填写：买入或卖出）</text>
+                        <text>\n2、对手方营业部席位号（上海席位号或深证席位号）</text>
+
+                        <text>\n3、证券代码（比如：000001）</text>
+
+                        <text>\n4、交易数量（比如：100万股）</text>
+
+                        <text>\n5、约定号（买卖双方设定的六位数字，比如：666888）</text>
+
+                        <text>\n6、交易价格（一般是15:00收盘确定）</text>
+
+                        <text>\n买方与卖方填写的证券代码、交易数量、约定号、交易价格必须完全一致，且买卖方向及对手方席位号不能有误，才能确保交易成功。</text>
+                    </view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../images/qhdz_2.jpeg" mode="aspectFit" style="height:;width:100%;" /> 
+                    </view>
+                    <view class="weui-article__p">
+                      <text>\n 第三步</text>
+
+                        <text>\n 15:00收盘，大宗交易时间正式开始，买卖双方确定最终成交价格，通过各自营业部进行最终申报，并随时确认交易是否成功，15:30大宗交易结束（上交所成交确认申报增加了16:00-17:00这一栏，也就是说上交所最晚可在下午5点前完成大宗交易申报）。</text>
+                    </view>
+
+                </view>
+
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">四、 天萃宝大宗交易</view>
+                    <view class="weui-article__p">
+                        <text>\n  1、服务范围：限售大宗交易</text>
+                        <image class="weui-article__img" src="../../images/qhdz_3.jpeg" mode="aspectFit" style="height:;width:100%;" /> 
+                        <text>\n  2、出让方操作流程</text>
+                        <image class="weui-article__img" src="../../images/qhdz_4.png" mode="aspectFit" style="height:;width:100%;" /> 
+                        <text>\n  3、受让方操作流程</text>
+                        <image class="weui-article__img" src="../../images/qhdz_5.png" mode="aspectFit" style="height:;width:100%;" /> 
+                        <text>\n  4、产品功能</text>
+                        <text>\n天萃宝的限售大宗平台如何服务买卖方？</text>
+
+                        <text>\n a. 卖方可以在平台上上传项目。</text>
+
+                        <text>\n b. 买方可以直接竞价，由平台来安排线下磋商，达成交易。</text>
+
+                        <text>\n 大宗交易卖方主体定向增发投资机构与Pre IPO机构，每个市场上大概有接近一万家，数量众多，通过传统方法难以全部覆盖，信息不对称严重，而通过互联网的手段可以高效将信息送达，鹿秀金融正是解决了这个痛点。</text>
+
+                        <text>\n 卖家有多种报价形式，既可以报相对价格，也可以报绝对价格，或者对价格保密；如果买家感兴趣可以把这些项目加到关注列表里，这样方便来管理买家的项目以及项目的推进。而且若项目有任何进展，鹿秀都会即时给买家发送短信和APP推送通知。</text>
+
+                        <text>\n 鹿秀通过项目与咨询信息的完美整合，为大宗出让方与受让方打造了一个信息平台，使大宗交易更高效！</text>
+
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+</view>
+
+
+

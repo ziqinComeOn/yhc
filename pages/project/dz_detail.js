@@ -85,8 +85,37 @@ Page({
    */
   makeCall:function(e){
     let phone_number = e.target.dataset.phone
-    wx.makePhoneCall({
-      phoneNumber: phone_number //仅为示例，并非真实的电话号码
+    //从全局缓存中获取此人所有积分数量，如果不足6积分，提醒对方分享邀请好友注册奖励5积分
+    let myIntegral = wx.getStorageSync("myIntegral")
+    
+    //获取拨打此电话所需的积分数量
+    let integral = e.target.dataset.integral
+    //提示框提醒要消耗积分
+    wx.showModal({
+      title: '提示',
+      content: '模态弹窗',
+      confirmColor: '#436ec1',
+      cancelColor:'#436ec1',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          //判断个人积分是否满足此次消耗 转成数字类型
+          if (Number(myIntegral) < Number(integral)) {
+            //积分不足 提示获取积分的几种方式
+
+          }else{
+            //可以正常拨号
+            wx.makePhoneCall({
+              phoneNumber: phone_number 
+            })
+          }
+
+        } else {
+          console.log('用户点击取消')
+        }
+
+      }
     })
+    
   }
 })

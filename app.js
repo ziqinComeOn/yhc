@@ -7,7 +7,8 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    //设置积分全局缓存
+    wx.setStorageSync("myIntegral",4)
     // 登录
     wx.login({
       success: res => {

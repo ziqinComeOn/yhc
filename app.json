@@ -9,6 +9,7 @@
     "pages/article/index",
     "pages/article/index_1",
     "pages/article/index_2",
+    "pages/article/lb_detail",
     "pages/my/my",
     "pages/logs/logs"
   ],
