@@ -137,6 +137,18 @@ Page({
     wx.navigateTo({
       url: "/pages/wallet/billDetails?jsonStr=" + str + '&strr=' + _str
     })
-  }
+  },
+
+  //定向增发 点击事件 页面跳转
+  bindToDetail: function (e) {
+    var id = e.currentTarget.dataset.id
+    //console.log(id)
+    //跳转页面
+    wx.navigateTo({
+      url: '/pages/project/zf_detail?id=' + id,
+    })
+
+  },
+
 
 })

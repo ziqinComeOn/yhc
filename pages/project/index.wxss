@@ -172,4 +172,45 @@
 .weui-media-box__yhc-item:last-child text{
   color:#000000;
 }
+.table, .table div {
+  margin: 0 auto;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse; /*合并边框*/
+  box-sizing: border-box;
+}
+
+.table-tr {
+  display: table-row; /*此元素会作为一个表格行显示（类似 <tr>）*/
+  height: 92rpx;
+}
+
+.table-th {
+  display: table-cell; /*此元素会作为一个表格单元格显示（类似 <td> 和 <th>）*/
+  font-weight: 400;
+  /* border: 1rpx solid gray; */
+  text-align: center;
+  vertical-align: middle;
+  color:#888888;
+  font-size:32rpx;
+}
+
+.table-td {
+  display: table-cell;
+  font-weight: 400;
+  /* border: 1rpx solid gray; */
+  text-align: center;
+  vertical-align: middle;
+  color:#333333;
+  font-size:28rpx;
+}
+.table-td:nth-of-type(2){
+  color:#dbb878;
+}
+.table-tdd{
+  font-size:24rpx;
+}
   
