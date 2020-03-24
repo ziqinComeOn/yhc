@@ -20,7 +20,7 @@
         </navigator>
       </view>
       <view class="page-yhc-item">
-        <navigator url="">
+        <navigator url="../project/dxzf">
           <image src="../../images/dxzf.png"></image>
           <view>定向增发</view>
         </navigator>
@@ -32,7 +32,7 @@
         </navigator>
       </view>
       <view class="page-yhc-item">
-        <navigator url="">
+        <navigator url="../project/dxzf">
           <image src="../../images/dxzf.png"></image>
           <view>定向增发</view>
         </navigator>
