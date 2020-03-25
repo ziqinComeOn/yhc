@@ -13,6 +13,7 @@
     "pages/article/index_2",
     "pages/article/lb_detail",
     "pages/my/my",
+    "pages/my/my_guanzhu",
     "pages/logs/logs"
   ],
   "window": {

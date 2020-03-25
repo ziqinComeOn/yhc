@@ -95,6 +95,7 @@ Page({
     }
 
     this.setData({
+      icon18:'../../images/guanzhu.png',
       icon19: '../../images/wallet.png',
       icon20: '../../images/not-certified.png',
       icon200: '../../images/certified.png',
@@ -102,6 +103,7 @@ Page({
       icon22: '../../images/agreement.png',
       icon23: '../../images/aboutus.png',
       icon24:'../../images/setUp.png',
+      url18:'/pages/my/my_guanzhu',
       url19: '/pages/wallet/wallet',
       url20: '/pages/my/certifieds',
       url21: '/pages/helper/helper',
