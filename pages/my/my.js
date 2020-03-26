@@ -422,5 +422,24 @@ Page({
       url: '/pages/agreement/privacyAgreement',
     })
   },
+  textPaste:function() {
+    wx.showToast({
+      title: '复制成功',
+    })
+    wx.setClipboardData({
+      data: 'zmd1047773569',
+      success: function (res) {
+        wx.getClipboardData({    //这个api是把拿到的数据放到电脑系统中的
+          success: function (res) {
+            //console.log(res.data) // data
+            wx.showModal({
+              title: '温馨提示',
+              content: '恭喜，微信号复制成功~ \n 欢迎邀请私募行业人士进群交流~',
+            })
+          }
+        })
+      }
+    })
+  }
   
 })
