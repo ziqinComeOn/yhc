@@ -1,0 +1,4 @@
+@import '../project/index';
+.weui-cell_yhc:nth-of-type(1) {
+  margin-top:80rpx;
+}

@@ -17,92 +17,9 @@
     </view>
   </view>
   <view class="weui-cells_yhc weui-cells_after-title" wx:else>
-    <view class="weui-cell_yhc" wx:for="{{sendList}}" wx:key="index" bindtap="bindBillDetail" data-item="{{item}}" data-current-tab="{{currentTab}}">
-      <!-- 大宗交易start -->
-      <view class="weui-panel">
-        <view class="weui-panel__bd">
-          <view class="weui-media-box weui-media-box_small-appmsg">
-            <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
-              <navigator url="#" class="weui-cell weui-cell_example weui-cell_access" hover-class="none">
-                <view class="weui-cell__hd">
-                  大宗每日行情
-                </view>
-                <view class="weui-cell__bd weui-cell_primary">
-                  <view class="weui-cell_primary_view">2020-03-09</view>
-                </view>
-                <view class="weui-cell__ft weui-cell__ft_in-access weui-cell__ft-active">
-                  更多
-                </view>
-              </navigator>
-            </view>
-          </view>
-        </view>
-
-        <swiper class="swiper_background" indicator-dots="{{indicatorDotss}}" autoplay="{{autoplays}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="20rpx" next-margin="40rpx">
-          <swiper-item class="swiper-item_background">
-            <view class="swiper-item_background_in {{item}}">
-              <view class="swiper-item_background_in_view">
-                <view>17.74</view>
-                <view>成交金额</view>
-              </view>
-            </view>
-          </swiper-item>
-          <swiper-item class="swiper-item_background">
-            <view class="swiper-item_background_in {{item}}">
-              <view class="swiper-item_background_in_view">
-                <view>44单</view>
-                <view>成交单数</view>
-              </view>
-            </view>
-          </swiper-item>
-        </swiper>
-        <view class="page__bd_spacing">
-          <view class="weui-flex__item">
-            <view class="placeholder">搜于特</view>
-          </view>
-          <view class="weui-flex__item">
-            <view class="placeholder">圆通速递</view>
-          </view>
-          <view class="weui-flex__item">
-            <view class="placeholder">正邦科技</view>
-          </view>
-          <view class="weui-flex__item">
-            <view class="placeholder">大北农</view>
-          </view>
-        </view>
-      </view>
-      <!-- 大宗交易end -->
-      <!-- <view class="weui-cell__bd">{{item.tradetype}}
-        <text style="font-size:24rpx;color:#AAAAAA;">\n{{item.date_2}}</text>
-      </view>
-      <view class="weui-cell__ft" style="color:#000000;" wx:if="{{currentTab==0}}">+{{item.cashfee}}
-        <text style="font-size:24rpx;color:#888888">\n累计{{item.add_up}}</text>
-      </view>
-      <view class="weui-cell__ft" style="color:#000000;" wx:else>-{{item.cashfee}}
-        <text style="font-size:24rpx;color:#888888">\n累计{{item.add_up}}</text>
-      </view> -->
-    </view>
     <!-- 列表 start-->
     <view class="page-section weui-cell_yhc">
       <view class="weui-panel">
-        <view class="weui-panel__bd">
-          <view class="weui-media-box weui-media-box_small-appmsg">
-            <view class="weui-cells weui-cells_in-small-appmsg ">
-              <navigator url="../project/dzjy" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__hd">
-                  一手大宗
-                </view>
-                <view class="weui-cell__bd weui-cell_primary">
-                  <view class="weui-cell_primary_view">一手/靠谱</view>
-                </view>
-                <view class="weui-cell__ft weui-cell__ft_in-access weui-cell__ft-active">
-                  更多
-                </view>
-              </navigator>
-            </view>
-          </view>
-        </view>
-
         <view class="weui-panel__bd">
           <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">

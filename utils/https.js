@@ -1,5 +1,5 @@
 var rootDocment = 'https://www.developsea.cn/';//域名
-var rootDocment = 'https://wx.ssgsrz.com/';//域名
+var rootDocment = 'https://wx.ssgsrz.com/';
 function reqGet(url, data, cb) {
   wx.request({
     url: rootDocment + url,

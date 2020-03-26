@@ -4,13 +4,16 @@
     "pages/project/index",
     "pages/project/dzjy",
     "pages/project/jxxm",
+    "pages/project/dxzf",
     "pages/project/dz_detail",
     "pages/project/jx_detail",
+    "pages/project/zf_detail",
     "pages/article/index",
     "pages/article/index_1",
     "pages/article/index_2",
     "pages/article/lb_detail",
     "pages/my/my",
+    "pages/my/my_guanzhu",
     "pages/logs/logs"
   ],
   "window": {
