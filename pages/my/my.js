@@ -24,8 +24,8 @@ Page({
     age: 18,
     money_num: "0.00",
     showModalStatus: false,
-    statu:'open',
-    is_tabbar:false,
+    statu: 'open',
+    is_tabbar: false,
   },
 
   /**
@@ -39,18 +39,18 @@ Page({
       this.getTabBar().setData({
         selected: 3,  //数字是当前页面在tabbar的索引,如我的查询页索引是2，因此这边为2，同理首页就为0，审批页面为1
       })
-      
+
     }
 
-    app.reqMessfunc.reqMessPost('',{},function(res){
+    app.reqMessfunc.reqMessPost('', {}, function (res) {
       var data = res
       var data = 1
-      console.log("我是data",data)
-      if(data==1){
+      console.log("我是data", data)
+      if (data == 1) {
         //显示红点
-        if (typeof _this.getTabBar === 'function' && _this.getTabBar()) { _this.getTabBar().setData({ ['list[1].tagNum']: 1, is_tabbar:false }) }
-      }else{
-        if (typeof _this.getTabBar === 'function' && _this.getTabBar()) { _this.getTabBar().setData({ ['list[1].tagNum']:0 }) }
+        if (typeof _this.getTabBar === 'function' && _this.getTabBar()) { _this.getTabBar().setData({ ['list[1].tagNum']: 1, is_tabbar: false }) }
+      } else {
+        if (typeof _this.getTabBar === 'function' && _this.getTabBar()) { _this.getTabBar().setData({ ['list[1].tagNum']: 0 }) }
       }
 
     })
@@ -95,21 +95,21 @@ Page({
     }
 
     this.setData({
-      icon18:'../../images/guanzhu.png',
+      icon18: '../../images/guanzhu.png',
       icon19: '../../images/wallet.png',
       icon20: '../../images/not-certified.png',
       icon200: '../../images/certified.png',
       icon21: '../../images/helper.png',
       icon22: '../../images/agreement.png',
       icon23: '../../images/aboutus.png',
-      icon24:'../../images/setUp.png',
-      url18:'/pages/my/my_guanzhu',
+      icon24: '../../images/setUp.png',
+      url18: '/pages/my/my_guanzhu',
       url19: '/pages/wallet/wallet',
       url20: '/pages/my/certifieds',
       url21: '/pages/helper/helper',
       url22: '/pages/agreement/agreement',
       url23: '/pages/aboutus/aboutus',
-      url24:'/pages/setup/setup'
+      url24: '/pages/setup/setup'
     });
     /*this.setData({
       isaut: this.data.isaut,
@@ -255,7 +255,7 @@ Page({
           console.log('初次渲染数据', res)
           //调起用户协议弹窗
           var currentStatu = that.data.statu
-          if(!res.data.nickname){
+          if (!res.data.nickname) {
             that.util(currentStatu)
           }
           that.setData({
@@ -417,10 +417,29 @@ Page({
     })
   },
 
-  toPrivacyAgreement:function(){
+  toPrivacyAgreement: function () {
     wx.redirectTo({
       url: '/pages/agreement/privacyAgreement',
     })
   },
-  
+  textPaste: function () {
+    wx.showToast({
+      title: '复制成功',
+    })
+    wx.setClipboardData({
+      data: 'zmd1047773569',
+      success: function (res) {
+        wx.getClipboardData({    //这个api是把拿到的数据放到电脑系统中的
+          success: function (res) {
+            //console.log(res.data) // data
+            wx.showModal({
+              title: '温馨提示',
+              content: '恭喜，微信号复制成功~ \n 欢迎邀请私募行业人士进群交流~',
+            })
+          }
+        })
+      }
+    })
+  }
+
 })

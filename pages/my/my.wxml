@@ -1,14 +1,14 @@
 <view class="my-wrapper">
   <view class="avatar-wrapper">
     <view class="userinfo">
-      <view class="userinfo-containers" style="display:{{hasUserInfoLogin?'block':'none'}}">
+      <view class="userinfo-containers" style="display:{{hasUserInfoLogin?'none':'block'}}">
        <view class="image-border">
           <image class="userinfo-avatar" src="../../images/default.png" mode="cover"></image>
         </view>
         <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="button_1"> 授权登录 </button>
       </view>
 
-      <view class="userinfo-container" style="display:{{hasUserInfo?'block':'none'}}">
+      <view class="userinfo-container" style="display:{{hasUserInfo?'none':'block'}}">
         <view class="image-border">
           <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
         </view>
@@ -43,6 +43,52 @@
   <view class="weui-panel">
     <view class="weui-panel__bd">
       <view class="weui-media-box weui-media-box_small-appmsg">
+        <view class="weui-cells weui-cells_in-small-appmsg weui-cells_yhc">
+          <navigator url="{{url18}}" class="weui-cell weui-cell_example weui-cell_access weui-cell_access_yhc" hover-class="weui-cell_active">
+        
+            <view class="weui-cell__bd weui-cell_primary weui-cell_primary_ych">
+              <view>0</view>
+              <view>我的账户</view>
+            </view>
+          </navigator>
+
+          <navigator url="{{is_status?url19:''}}" class="weui-cell weui-cell_example weui-cell_access weui-cell_access_yhc" hover-class="weui-cell_active">
+           
+            <view class="weui-cell__bd weui-cell_primary weui-cell_primary_ych">
+              <view>10</view>
+              <view>我的积分</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+
+  <view class="page-section adsecs">
+      <!-- 公告 -->
+      <view class='adsec'>
+        <icon class='iconfont icongonggao c_main fs_36'>
+          <image src="../../images/gonggao.png"></image>
+        </icon>
+        <text class='c_main fs_26'>添加客服微信进入：</text>
+        <swiper class="swiper_container" autoplay="false" circular="true" interval="2000">
+            <navigator url="#" open-type="navigate">
+              <swiper-item>
+                <view class="swiper_item">行业交流群</view>
+              </swiper-item>
+            </navigator>
+        </swiper>
+        <!-- 点击复制 -->
+        <text class='textPaste' bindtap='textPaste'>点击复制</text>
+        <!-- 点击复制 -->
+      </view>
+      <!-- 公告 end -->
+    </view>
+
+  <view class="weui-panel" style="margin-bottom:100rpx;">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_small-appmsg">
         <view class="weui-cells weui-cells_in-small-appmsg">
           <navigator url="{{url18}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
@@ -54,7 +100,7 @@
             <view class="weui-cell__ft weui-cell__ft_in-access weui-cell_actives"></view>
           </navigator>
 
-          <!-- <navigator url="{{is_status?url19:''}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+          <navigator url="{{is_status?url19:''}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
               <image src="{{icon19}}" style="width: 20px;height: 20px;margin-right: 16px;vertical-align:middle;" />
             </view>
@@ -62,7 +108,7 @@
               <view>钱包</view>
             </view>
             <view class="weui-cell__ft weui-cell__ft_in-access weui-cell_actives">{{money_num}}</view>
-          </navigator> -->
+          </navigator>
 
           <navigator url="{{is_status?url20:''}}" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
