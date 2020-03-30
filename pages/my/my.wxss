@@ -362,9 +362,10 @@ page{
   text-align: center;
   padding:40rpx 0;
 }
-.weui-cell_access_yhc:first-child{
-  border-right: 2rpx dashed #eeeeee;
-}
 .weui-cell_access_yhc:before{
   border-top:none;
+}
+.weui-cell_primary_ych:first-child{
+  line-height: 50rpx;
+  border-right:2rpx dashed #eeeeee;
 }
