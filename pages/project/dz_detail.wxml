@@ -24,7 +24,7 @@
                   </view>
                   <view class="weui-cell_yhc_tag-item">
                     <view class="weui-cell_yhc_tag-item_inblock">
-                      <image src="../../images/view.png" style="width:48rpx;height:48rpx;"></image><text class="weui-cell_yhc_tag-item-txt">30</text>
+                      <image src="../../images/view.png" style="width:48rpx;height:48rpx;"></image><text class="weui-cell_yhc_tag-item-txt">{{msg.j_views}}</text>
                     </view>
                     
                   </view>
@@ -51,7 +51,7 @@
                     <view class="weui-cell_primary_view">项目名称</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    **股份大股东减持
+                    {{msg.j_name}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -67,7 +67,7 @@
                     <view class="weui-cell_primary_view">股票名称/代码</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    02****
+                    {{msg.j_daima}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -75,7 +75,7 @@
                     <view class="weui-cell_primary_view">股票来源</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    首发
+                    {{msg.j_laiyuan}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -83,7 +83,7 @@
                     <view class="weui-cell_primary_view">出让方</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    某股东
+                    {{msg.j_churangf}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -91,7 +91,7 @@
                     <view class="weui-cell_primary_view">出让方持股数量</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    500万股
+                    {{msg.j_crcnum}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -99,7 +99,7 @@
                     <view class="weui-cell_primary_view">本次出让股份数量</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    500万股
+                    {{msg.j_crnum}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -107,7 +107,7 @@
                     <view class="weui-cell_primary_view">前一交易收盘价</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    34元
+                    {{msg.j_spjia}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -115,7 +115,7 @@
                     <view class="weui-cell_primary_view">持股金额</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    17000万元
+                    {{msg.j_cgjine}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -123,7 +123,7 @@
                     <view class="weui-cell_primary_view">折扣率</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    91折
+                    {{msg.j_zklv}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -131,7 +131,7 @@
                     <view class="weui-cell_primary_view">交易日期</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    随时
+                    {{msg.j_jydate}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -139,7 +139,7 @@
                     <view class="weui-cell_primary_view">签约地点</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    上海
+                    {{msg.j_qydidian}}
                   </view>
                 </view>
               </view>
@@ -175,7 +175,7 @@
                     <view class="weui-cell_primary_view">直接对接企业人员</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    财务部
+                    {{msg.j_jname}}
                   </view>
                 </view>
             </view>
@@ -194,7 +194,7 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view weui-cell_primary_view_other">**股份大宗交易减持</view>
+                    <view class="weui-cell_primary_view weui-cell_primary_view_other">{{msg.j_desc}}</view>
                   </view>
                 </view>
                 
@@ -213,7 +213,7 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view weui-cell_primary_view_other">绩优股，折扣低</view>
+                    <view class="weui-cell_primary_view weui-cell_primary_view_other">{{msg.j_liangdian}}</view>
                   </view>
                 </view>
                 
@@ -232,7 +232,7 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view weui-cell_primary_view_other">买断</view>
+                    <view class="weui-cell_primary_view weui-cell_primary_view_other">{{msg.j_cuoshi}}</view>
                   </view>
                 </view>
                 

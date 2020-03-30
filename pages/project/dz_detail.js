@@ -1,4 +1,5 @@
 // pages/project/dz_detail.js
+const app = getApp()
 Page({
 
   /**
@@ -12,6 +13,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var id = options.id
+    var that = this
+    app.reqGetfunc.reqGet('index/dzjy',{'id':id},function(res){
+       console.log(res)
+       that.setData({msg:res.msg})
+    })
 
   },
 
@@ -102,7 +109,7 @@ Page({
           //判断个人积分是否满足此次消耗 转成数字类型
           if (Number(myIntegral) < Number(integral)) {
             //积分不足 提示获取积分的几种方式
-
+            
           }else{
             //可以正常拨号
             wx.makePhoneCall({

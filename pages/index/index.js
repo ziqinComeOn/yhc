@@ -30,6 +30,17 @@ Page({
     setTimeout(function () {
       wx.hideToast()
     }, 2000)
+    var that = this
+    //请求轮播图数据
+    app.reqGetfunc.reqGet('index/index.html',{},function(res){
+      console.log(res)
+      that.setData({ 
+        banList: res.banList,
+        dzjyList:res.dzjyList,
+         
+      })
+    })
+
     
     this.setData({
       icon1:'../../images/binggou.jpg',

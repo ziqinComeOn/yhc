@@ -2,11 +2,11 @@
   <view class="page-body">
     <view class="page-section page-section-spacing swiper">
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
-        <block wx:for="{{background_image}}" wx:key="*this">
+        <block wx:for="{{banList}}" wx:key="index">
           <swiper-item>
             <!-- <view class="swiper-item {{item}}"></view> -->
             <navigator class="swiper-item" url="../article/lb_detail">
-              <image src="{{item}}"></image>
+              <image src="{{item.pic_url}}"></image>
             </navigator>
           </swiper-item>
         </block>
@@ -46,7 +46,7 @@
         </icon>
         <text class='c_main fs_26'>公告：</text>
         <swiper class="swiper_container" autoplay="true" circular="true" interval="2000">
-          <block wx:for="{{msgList}}">
+          <block wx:for="{{msgList}}" wx:key="index">
             <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
               <swiper-item>
                 <view class="swiper_item">{{item.title}}</view>
@@ -78,13 +78,13 @@
         </view>
         
         <swiper class="swiper_background" indicator-dots="{{indicatorDotss}}" autoplay="{{autoplays}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="20rpx" next-margin="40rpx">
-          <block wx:for="{{background}}" wx:key="*this">
+          <block wx:for="{{dzjyList}}" wx:key="index">
             <swiper-item class="swiper-item_background">
-              <navigator class="swiper-item_background_out" url="">
-                <view class="swiper-item_background_in {{item}}">
+              <navigator class="swiper-item_background_out" url="../project/dz_detail?id={{item.j_id}}">
+                <view class="swiper-item_background_in {{index%2 ==0?'demo-text-1':'demo-text-2'}}">
                   <view class="swiper-item_background_in_view">
-                    <view>二三四五</view>
-                    <view>88.00%市价</view>
+                    <view>{{item.j_daima}}</view>
+                    <view>{{item.j_crcnum}}</view>
                   </view>
                 </view>
               </navigator>
