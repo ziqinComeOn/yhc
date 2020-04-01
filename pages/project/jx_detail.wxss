@@ -1,5 +1,5 @@
-@import './dz_detail.wxss';
-
+/* @import './dz_detail.wxss'; */
+@import '../../utils/same.wxss';
 .page__bd{
   border-bottom:0rpx;
 }
@@ -14,4 +14,95 @@
   -webkit-align-items: top !important;
   align-items: top !important;
   height: 180rpx;
+}
+
+.weui-panel__hd{
+  font-size:30rpx;
+  color:#333333;
+  font-weight: 700;
+}
+.weui-cell_primary_view{
+  font-size:28rpx;
+  color: #999999;
+}
+.weui-cell_primary_view_other{
+  font-size: 28rpx;
+  color:#666666;
+}
+.shoucang_d{
+  font-size: 24rpx;
+  color:#999999;
+}
+.weui-cell__ft-active{
+  font-size: 28rpx;
+  color:#666666;
+}
+.weui-cell_access_background:nth-child(odd){
+  background:#faf9fe;
+}
+.weui-cell_yhc_tag{
+  padding:0 30rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  justify-content:space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.gupiao_style{
+  font-size: 24rpx;
+  height: 60rpx;
+  margin-left:20rpx;
+  background: #dac086;
+  border-radius: 30rpx;
+  color:#FFFFFF;
+  padding: 4rpx 10rpx;
+}
+.weui-cell_yhc_tag-item_inblock{
+  position: relative;
+}
+.weui-cell_yhc_tag-item_inblock image{
+  position: absolute;
+  left: -38rpx;
+  top: 15rpx;
+}
+.weui-cell_yhc_tag-item-txt{
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  color:#888888;
+}
+.goods-fixed-icon text {
+    /* color: #fff; */
+    /* font-size: 22rpx; */
+    text-align: center;
+    display: block;
+    position: absolute;
+    left:58rpx;
+    top:20rpx;
+}
+.goods-fixed-icon button{
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 144rpx !important;
+  opacity: 0;
+  z-index: 99;
+}
+.weui-cell:before{
+  border-top:none;
+}
+.weui-cell:after{
+  border-bottom:none;
+}
+.weui-panel:before{
+  border-top:none !important;
+}
+.weui-panel:after{
+  border-bottom:none !important;
 }

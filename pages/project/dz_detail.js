@@ -6,7 +6,6 @@ Page({
    */
   data: {
     floorstatus: false, // 返回顶部
-    showDialog: false,
     dialog1: false,
   },
 
@@ -56,14 +55,21 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    var users = wx.getStorageSync('user');
+    if (res.from === 'button') { }
+    return {
+      title: '萤火虫大宗减持',
+      path: '/pages/index/index?from_uid=' + users.id,
+      imageUrl: '../../images/1.png',//自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径。支持PNG及JPG。显示图片长宽比是 5:4。
+      success: function (res) { }
+    }
   },
   /**
    * 返回顶部
@@ -104,10 +110,24 @@ Page({
           //判断个人积分是否满足此次消耗 转成数字类型
           if (Number(myIntegral) < Number(integral)) {
             console.log("积分不足调起Dialog")
-            //积分不足 提示获取积分的几种方式
-            that.setData({
-              dialog1: true
-            });
+            //提示积分不足
+            wx.showModal({
+              title: '温馨提示',
+              content: '积分不足，查看失败 \n 点击确定查看如何获取积分',
+              confirmColor: '#436ec1',
+              cancelColor: '#436ec1',
+              success: function (res) {
+                //积分不足 提示获取积分的几种方式
+                if (res.confirm) {
+                  that.setData({
+                    dialog1: true
+                  });
+                }else{
+                  console.log("用户点击取消")
+                }
+              }
+            })
+            
           }else{
             wx.showModal({
               title: '温馨提示',
