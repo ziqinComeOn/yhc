@@ -80,7 +80,7 @@
         <swiper class="swiper_background" indicator-dots="{{indicatorDotss}}" autoplay="{{autoplays}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="20rpx" next-margin="40rpx">
           <block wx:for="{{background}}" wx:key="*this">
             <swiper-item class="swiper-item_background">
-              <navigator class="swiper-item_background_out" url="">
+              <navigator class="swiper-item_background_out" url="../project/dz_detail">
                 <view class="swiper-item_background_in {{item}}">
                   <view class="swiper-item_background_in_view">
                     <view>二三四五</view>

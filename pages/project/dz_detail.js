@@ -1,11 +1,13 @@
 // pages/project/dz_detail.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
     floorstatus: false, // 返回顶部
+    showDialog: false,
+    dialog1: false,
   },
 
   /**
@@ -84,6 +86,7 @@ Page({
    * 打电话
    */
   makeCall:function(e){
+    var that = this
     let phone_number = e.target.dataset.phone
     //从全局缓存中获取此人所有积分数量，如果不足6积分，提醒对方分享邀请好友注册奖励5积分
     let myIntegral = wx.getStorageSync("myIntegral")
@@ -92,8 +95,7 @@ Page({
     let integral = e.target.dataset.integral
     //提示框提醒要消耗积分
     wx.showModal({
-      title: '提示',
-      content: '模态弹窗',
+      content: '非会员一键拨号将扣除20积分 \n 是否确认？',
       confirmColor: '#436ec1',
       cancelColor:'#436ec1',
       success: function (res) {
@@ -101,13 +103,25 @@ Page({
           console.log('用户点击确定')
           //判断个人积分是否满足此次消耗 转成数字类型
           if (Number(myIntegral) < Number(integral)) {
+            console.log("积分不足调起Dialog")
             //积分不足 提示获取积分的几种方式
-
+            that.setData({
+              dialog1: true
+            });
           }else{
-            //可以正常拨号
-            wx.makePhoneCall({
-              phoneNumber: phone_number 
+            wx.showModal({
+              title: '温馨提示',
+              content: '联系我时请说是在萤火虫大宗减持网上看到的😄',
+              confirmColor: '#436ec1',
+              cancelColor: '#436ec1',
+              success: function (res) {
+                //可以正常拨号
+                wx.makePhoneCall({
+                  phoneNumber: phone_number
+                })
+              }
             })
+            
           }
 
         } else {
@@ -117,5 +131,12 @@ Page({
       }
     })
     
-  }
+  },
+  close: function () {
+    this.setData({
+      dialog1: false,
+      dialog2: false
+    });
+  },
+  
 })
