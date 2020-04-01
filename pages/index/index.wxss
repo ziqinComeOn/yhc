@@ -173,7 +173,7 @@ button:last-child{
 }
 .fs_26{
   display: block;
-  width: 100rpx;
+  width: 110rpx;
   color: #d81e06;
 }
 .swiper_container {
@@ -234,4 +234,7 @@ button:last-child{
 .weui-flex__item{
   background-color: #f7f7f7;
   margin: 20rpx 10rpx;
+}
+.weui-media-box{
+  padding:30rpx 20rpx;
 }

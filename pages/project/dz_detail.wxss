@@ -1,5 +1,7 @@
+@import '../../utils/newsame.wxss';
 @import '../../utils/same.wxss';
 .page__bd{
+  padding-bottom: 0px;
   border-bottom:20rpx solid #faf9fe;
 }
 .weui-panel__hd{
@@ -84,5 +86,37 @@
   border-top:none;
 }
 .weui-cell:after{
+  border-bottom:none;
+}
+.weui-panel:before{
   border-top:none;
+}
+.weui-panel:after{
+  border-bottom:none;
+}
+.weui-half-screen-dialog__button{
+  display:flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  align-items: center;
+  margin-top: 60rpx;
+  padding: 0 60rpx;
+}
+.weui-half-screen-dialog__button button{
+  flex:1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+}
+.dialog__button{
+  width: 200rpx !important;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: #2782D7;
+  border:none;
+  outline: none;
+  color: #FFFFFF;
+  margin:0 40rpx;
+}
+.dialog__button:first-child{
+  margin-right: 60rpx;
 }

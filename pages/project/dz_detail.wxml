@@ -288,3 +288,30 @@
 <view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
   <text class="iconfont icon-fanhuidingbu"></text>
 </view>
+
+
+<!-- 底部半屏幕弹窗 -->
+<view class="fadeIn" wx:if="{{dialog1}}">
+        <view class="weui-mask" bindtap="close"></view>
+        <view class="weui-half-screen-dialog">
+            <view class="weui-half-screen-dialog__hd">
+                <view class="weui-half-screen-dialog__hd__side" bindtap="close">
+                    <a class="weui-icon-btn">关闭<i class="weui-icon-close-thin"></i></a>
+                </view>
+                <view class="weui-half-screen-dialog__hd__main">
+                    <strong class="weui-half-screen-dialog__title">如何获取积分？</strong>
+                </view>
+            </view>
+            <view class="weui-half-screen-dialog__bd" style="padding-top:0px;height:auto;">
+                <text>
+                1、成功邀请好友首次登录后获取积分。\n
+                2、通过任务系统（个人中心签到等活动）。\n
+                3、升级会员尊享无限制查看全站信息。
+                </text>
+                <view class="weui-half-screen-dialog__button">
+                  <button class="dialog__button">升级会员</button>
+                  <button class="dialog__button" open-type="share">邀请好友</button>
+                </view>
+            </view>
+        </view>
+    </view>

@@ -24,7 +24,7 @@ page{
   left: 0px;
   right: 0px;
   height: 46px;
-  z-index: 18;
+  z-index: 0;
   box-shadow: 1px 5px 15px rgba(50, 50, 50, 0.3);
   background: #fff;
 }
