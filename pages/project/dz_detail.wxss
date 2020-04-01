@@ -82,6 +82,10 @@
   opacity: 0;
   z-index: 99;
 }
+.weui-cells:after{
+  border-bottom:none;
+  z-index: 0;
+}
 .weui-cell:before{
   border-top:none;
 }
