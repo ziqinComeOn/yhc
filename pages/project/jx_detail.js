@@ -85,8 +85,25 @@ Page({
    */
   makeCall: function (e) {
     let phone_number = e.target.dataset.phone
-    wx.makePhoneCall({
-      phoneNumber: phone_number //仅为示例，并非真实的电话号码
+    wx.showModal({
+      title: '温馨提示',
+      content: '联系我时请说是在萤火虫大宗减持网上看到的😄',
+      confirmColor: '#436ec1',
+      cancelColor: '#436ec1',
+      success: function (res) {
+        if(res.confirm){
+          //可以正常拨号
+          wx.makePhoneCall({
+            phoneNumber: phone_number
+          })
+        }else{
+          //取消拨号
+          console.log("取消拨号")
+        }
+      }
     })
   }
+
+
+  
 })

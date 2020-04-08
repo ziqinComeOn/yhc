@@ -313,8 +313,8 @@ Page({
    * 跳转主页
    */
   bindEdit: function (e) {
-    wx.switchTab({
-      url: '/pages/index/index',
+    wx.navigateTo({
+      url: '/pages/my/edit_personal_message',
     })
   },
   /**
@@ -345,19 +345,6 @@ Page({
 
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
     this.util(currentStatu)
