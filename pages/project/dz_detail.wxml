@@ -12,7 +12,7 @@
                   <view class="weui-cell__bd weui-cell_primary">
                     <view class="weui-cell_primary_view">[002174]</view>
                   </view>
-                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                  <view class="weui-cell__fts weui-cell__ft_in-accesss weui-cell__ft-active">
                     <image style="width:48rpx;height:48rpx;" src="../../images/shoucang.png"></image>
                   </view>
                   <view class="shoucang_d">228</view>

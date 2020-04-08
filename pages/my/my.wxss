@@ -334,12 +334,12 @@ page{
 }
 .fs_26{
   display: block;
-  width: 280rpx;
+  width: 300rpx;
   color: #d81e06;
 }
 .swiper_container {
   height: 55rpx;
-  width: 30%;
+  width: 25%;
   line-height: 55rpx;
   padding-left: 10rpx;
 }
@@ -369,3 +369,10 @@ page{
   line-height: 50rpx;
   border-right:2rpx dashed #eeeeee;
 }
+.weui-cell_primary_ych view:first-child{
+   font-weight: 700;
+}
+.weui-cell_primary_ych view:last-child{
+   font-size: 28rpx;
+}
+
