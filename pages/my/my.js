@@ -1,6 +1,7 @@
 // pages/my/my.js
 const app = getApp()
 var util = require('../../utils/util.js')
+var https = require('../../utils/https.js')
 Page({
 
   /**
@@ -33,14 +34,6 @@ Page({
    */
   onLoad: function (options) {
     var _this = this
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      //console.log(this.getTabBar().data.list)
-      console.log(this.getTabBar().data.list)
-      this.getTabBar().setData({
-        selected: 3,  //数字是当前页面在tabbar的索引,如我的查询页索引是2，因此这边为2，同理首页就为0，审批页面为1
-      })
-
-    }
 
     app.reqMessfunc.reqMessPost('', {}, function (res) {
       var data = res
@@ -117,34 +110,33 @@ Page({
     })*/
   },
   getUserInfo: function (e) {
+    var that = this
     app.globalData.userInfo = e.detail.userInfo
 
-    // 传头像链接、性别、昵称到服务器
-    var userInfo = e.detail.userInfo
-    console.log('avatarUrl: ' + userInfo.avatarUrl)
-    console.log('nickName: ' + userInfo.nickName)
-    console.log('gender: ' + userInfo.gender)
-    wx.request({
-      url: 'https://www.developsea.cn/wechat/login_userinfo.php',
-      method: 'POST',
-      dataType: 'json',
-      header: {
-        'content-type': 'application/json' // 默认值   
-      },
-      data: {
-        my_id: wx.getStorageSync('my_id'),
-        my_session: wx.getStorageSync('my_session'),
-        photo_url: userInfo.avatarUrl,
-        nick_name: userInfo.nickName,
-        sex: userInfo.gender
-      },
-      success: function (res) {
-        console.log(res)
-
-      }
-    })
-
     if (app.globalData.userInfo) {
+      //同意授权登录 调起登录
+      wx.login({
+        success:function(res){
+          //请求后台获取用户openid
+          if(res.code){
+            var code = res.code
+            wx.getUserInfo({
+              success:function(data){
+                console.log(data)
+                var encryptedData = encodeURIComponent(data.encryptedData)
+                var iv = encodeURIComponent(data.iv)
+                var signature = data.signature
+                var rawData = data.rawData
+                //请求服务器
+                https.login('Wxlogin/login.html', code, encryptedData, iv, signature, rawData)
+              }
+            })
+          }
+        }   
+      })
+
+      //授权成功后，跳转进入小程序对应页面 或者不跳转直接在我的页面
+
       this.setData({
         userInfo: e.detail.userInfo,
         nickname: e.detail.userInfo.nickName,

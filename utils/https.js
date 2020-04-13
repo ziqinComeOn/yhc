@@ -48,7 +48,7 @@ function reqMessPost(url, data, cb) {
 }
 
 //登录函数
-function login(url, code, encrypteData, iv){
+function login(url, code, encryptedData, iv, signature,rawData){
   var that = this
   //创建一个dialog提示
   wx.showToast({
@@ -61,13 +61,15 @@ function login(url, code, encrypteData, iv){
     method:'GET',
     data:{
       code:code,
-      encrypteData: encrypteData,
-      iv:iv
+      encryptedData: encryptedData,
+      iv:iv,
+      signature: signature,
+      rawData:rawData
     },
     header: { 'Content-Type': 'application/json' },
     success: function (res) {
       wx.hideToast()
-      //console.log('服务器返回' + res.data)
+      console.log('服务器返回' + res.data)
       app.globalData.userInfo = res.data
     },
     fail: function () {

@@ -1,14 +1,14 @@
 <view class="my-wrapper">
   <view class="avatar-wrapper">
     <view class="userinfo">
-      <view class="userinfo-containers" style="display:{{hasUserInfoLogin?'none':'block'}}">
+      <view class="userinfo-containers" style="display:{{hasUserInfoLogin?'block':'none'}}">
        <view class="image-border">
           <image class="userinfo-avatar" src="../../images/default.png" mode="cover"></image>
         </view>
         <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="button_1"> 授权登录 </button>
       </view>
 
-      <view class="userinfo-container" style="display:{{hasUserInfo?'none':'block'}}">
+      <view class="userinfo-container" style="display:{{hasUserInfo?'block':'none'}}">
         <view class="image-border">
           <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
         </view>
