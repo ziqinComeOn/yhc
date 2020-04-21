@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="aboutus">
+    <view class="aboutus-icon"><image src="../../images/logoa.png"></image></view>
+    <!-- <view class="aboutus-project aboutus-project-nickname">萤火虫大宗减持</view>
+    <view class="aboutus-project aboutus-project-version">版本:v1.0.0</view> -->
+  </view>
+  <view class="aboutus-footer">
+    <!-- <view>有任何疑问都欢迎联系客服寻求帮助</view>
+    <view>客服微信号:xxxxxxxx</view>
+    <view>客服电话:021-33693226</view> -->
+    <button bindtap="bindSetting">微信用户授权设置</button>
+  </view>
+
+</view>

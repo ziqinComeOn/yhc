@@ -1,3 +1,4 @@
+
 var rootDocment = 'https://www.developsea.cn/';//域名
 var rootDocment = 'https://wx.ssgsrz.com/';
 function reqGet(url, data, cb) {
@@ -21,7 +22,8 @@ function reqPost(url, data, cb) {
     url: rootDocment + url,
     data: data,
     method: 'POST',
-    header: { 'Content-Type': 'application/json' },
+    //header: { 'Content-Type': 'application/json' },
+    header: {'Content-Type': 'application/x-www-form-urlencoded'},
     success: function (res) {
       return typeof cb == "function" && cb(res.data)
     },
@@ -70,7 +72,8 @@ function login(url, code, encryptedData, iv, signature,rawData){
     success: function (res) {
       wx.hideToast()
       console.log('服务器返回' + res.data)
-      app.globalData.userInfo = res.data
+      //app.globalData.userInfo = res.data
+      wx.setStorageSync('storage_userInfo',res.data)
     },
     fail: function () {
       wx.showToast({

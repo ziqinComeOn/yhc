@@ -1,0 +1,10 @@
+/* pages/setup/setup.wxss */
+@import '../aboutus/aboutus.wxss';
+button{
+  background-color: #436ec1 !important;
+  width: 80% !important;
+  color:#FFFFFF;
+}
+.aboutus{
+  height: 340rpx;
+}

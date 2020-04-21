@@ -17,7 +17,7 @@
     </view>
   </view>
   <view class="weui-cells_yhc weui-cells_after-title" wx:else>
-    <view class="weui-cell_yhc" wx:for="{{sendList}}" wx:key="index" bindtap="bindBillDetail" data-item="{{item}}" data-current-tab="{{currentTab}}">
+    <view class="weui-cell_yhc" data-current-tab="{{currentTab}}">
       <!-- 大宗交易start -->
       <view class="weui-panel">
         <view class="weui-panel__bd">
@@ -104,30 +104,16 @@
         </view>
 
         <view class="weui-panel__bd">
-          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <navigator url="" class="weui-media-box weui-media-box_appmsg" wx:for="{{sendList}}" wx:key="index" data-item="{{item}}">
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-              <view class="weui-media-box__title">游族网络
-                <text class="gupiao_code">[002174]</text>
+              <view class="weui-media-box__title">{{item.j_name}}
+                <text class="gupiao_code">[{{item.j_daima}}]</text>
                 <text class="gupiao_style">一手</text>
               </view>
               <view class="weui-media-box__desc">传媒-移动互联网服务</view>
               <view class="weui-media-box__yhc">
                 <view class="weui-media-box__yhc-item">卖出价格<text>88.00%</text><text>市价</text></view>
-                <view class="weui-media-box__yhc-item">卖出数量<text>40</text><text>万股</text></view>
-              </view>
-            </view>
-            
-          </navigator>
-          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-              <view class="weui-media-box__title">游族网络
-                <text class="gupiao_code">[002174]</text>
-                <text class="gupiao_style">一手</text>
-              </view>
-              <view class="weui-media-box__desc">传媒-移动互联网服务</view>
-              <view class="weui-media-box__yhc">
-                <view class="weui-media-box__yhc-item">卖出价格<text>88.00%</text><text>市价</text></view>
-                <view class="weui-media-box__yhc-item">卖出数量<text>40</text><text>万股</text></view>
+                <view class="weui-media-box__yhc-item">卖出数量<text>{{item.j_crcunm}}</text><text>万股</text></view>
               </view>
             </view>
           </navigator>
@@ -137,7 +123,7 @@
     <!-- 列表end -->
   </view>
 </view>
-
+<!-- 大宗交易 end -->
 <!-- 定向增发 start -->
 <view class="page__bd" style="display:{{currentTab==1?'':'none'}};">
 

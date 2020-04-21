@@ -63,6 +63,7 @@ Page({
     this.data.sendList = [];
     this.getData()
   },
+
   getData: function () {
     var _this = this;
     if (this.select.isEnd) {
@@ -82,22 +83,36 @@ Page({
     // })
 
     if (this.data.currentTab == 0) {
-      //收入
-      app.reqPostfunc.reqPost('wechat/myfile/get_money_in.php', { my_id: wx.getStorageSync('my_id'), my_session: wx.getStorageSync('my_session') }, function (res) {
-        var content = res;
-        _this.setData({
-          sendList: (_this.data.sendList).concat(content)
+      //大宗交易
+      app.reqPostfunc.reqPost('wxyaosu/jc_index.html', { page:this.select.page, size: this.select.size}, function (res) {
+          if(res){
+
+            var content = res;
+            _this.setData({
+              sendList: (_this.data.sendList).concat(content)
+            })
+            if (content.length > 0) {
+              _this.select.page++
+            } else {
+              _this.select.isEnd = true
+            }
+          } else {
+            //没有更多数据了
+            wx.showToast({
+              title: '没有更多了',
+              icon: 'none',
+              mask: true,
+              duration: 2000
+            }) 
+
+          }
+
         })
-        if (content.length > 0) {
-          _this.select.page++
-        } else {
-          _this.select.isEnd = true
-        }
-      })
+
     }
 
     if (this.data.currentTab == 1) {
-      //提现
+      //定向增发
       app.reqPostfunc.reqPost('wechat/myfile/get_money_out.php', { my_id: wx.getStorageSync('my_id'), my_session: wx.getStorageSync('my_session') }, function (res) {
         var content = res;
         _this.setData({
@@ -112,7 +127,7 @@ Page({
     }
 
     if (this.data.currentTab == 2) {
-      //提现
+      //精选项目
       app.reqPostfunc.reqPost('wechat/myfile/get_money_wxout.php', { my_id: wx.getStorageSync('my_id'), my_session: wx.getStorageSync('my_session') }, function (res) {
         var content = res;
         _this.setData({
