@@ -15,6 +15,8 @@
     "pages/my/my",
     "pages/my/my_guanzhu",
     "pages/my/edit_personal_message",
+    "pages/aboutus/aboutus",
+    "pages/setup/setup",
     "pages/logs/logs"
   ],
   "window": {

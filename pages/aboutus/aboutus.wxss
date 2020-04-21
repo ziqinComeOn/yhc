@@ -1,0 +1,55 @@
+/* pages/aboutus/aboutus.wxss */
+@import '../../utils/same.wxss';
+.page{
+  width:100%;
+  height: auto;
+}
+.aboutus{
+  width: 400rpx;
+  height: 440rpx;
+  /* background: #f7f7f7; */
+  margin: 120rpx auto;
+  padding-top:60rpx;
+}
+.aboutus .aboutus-icon{
+  /* width:180rpx;
+  height: 180rpx; */
+  width:200rpx;
+  height: 210rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  /* border:18rpx solid #90CBC7; */
+  margin:0 auto;
+}
+.aboutus .aboutus-icon image{
+  width: 100%;
+  height:100%;
+  border-radius: 50%;
+  border:none;
+}
+.aboutus-project{
+  text-align: center;
+  margin-top:20rpx; 
+}
+.aboutus-footer{
+  width: 90%;
+  font-size:32rpx;
+  margin:120rpx auto;
+  text-align: center; 
+  /* background: #f7f7f7; */
+  color:#888888;
+}
+.aboutus-footer view{
+  line-height: 50rpx;
+  height: 50rpx;
+}
+.aboutus-project-version{
+   color:#888888;
+}
+.aboutus-project-nickname{
+  font-weight: 700;
+  font-size:44rpx;
+}
+.aboutus-project-version{
+  font-size:30rpx;
+}
