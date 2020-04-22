@@ -83,6 +83,10 @@ Page({
     // })
 
     if (this.data.currentTab == 0) {
+      wx.showToast({
+        title: '加载中',
+        icon: 'loading',
+      })
       //大宗交易
       app.reqPostfunc.reqPost('wxyaosu/jc_index.html', { page:this.select.page, size: this.select.size}, function (res) {
           if(res){
@@ -96,6 +100,7 @@ Page({
             } else {
               _this.select.isEnd = true
             }
+            wx.hideToast()
           } else {
             //没有更多数据了
             wx.showToast({
@@ -112,6 +117,7 @@ Page({
     }
 
     if (this.data.currentTab == 1) {
+      console.log(this.select.page)
       //定向增发
       app.reqPostfunc.reqPost('wechat/myfile/get_money_out.php', { my_id: wx.getStorageSync('my_id'), my_session: wx.getStorageSync('my_session') }, function (res) {
         var content = res;

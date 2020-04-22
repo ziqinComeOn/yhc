@@ -3,33 +3,28 @@
     <view class="page__bd">
       <view class="weui-panel">
         <view class="weui-panel__bd">
-          <navigator url="../project/dz_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-              <view class="weui-media-box__title">游族网络
-                <text class="gupiao_code">[002174]</text>
-                <text class="gupiao_style">一手</text>
-                <text class="gupiao_style">流通股</text>
+          <block wx:if="{{sendList}}" wx:for="{{sendList}}" wx:key="index" data-item="{{item}}">
+            <navigator url="../project/dz_detail?id={{item.j_id}}" class="weui-media-box weui-media-box_appmsg" hover-class="">
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">{{item.j_name}}
+                  <text class="gupiao_code">[{{item.j_daima}}]</text>
+                  <text class="gupiao_style">一手</text>
+                  <text class="gupiao_style">流通股</text>
+                </view>
+                <view class="weui-media-box__desc">传媒-移动互联网服务</view>
+                <view class="weui-media-box__yhc">
+                  <view class="weui-media-box__yhc-item">卖出价格<text>88.00%</text><text>市价</text></view>
+                  <view class="weui-media-box__yhc-item">卖出数量<text>{{item.j_crcnum}}</text><text></text></view>
+                </view>
               </view>
-              <view class="weui-media-box__desc">传媒-移动互联网服务</view>
-              <view class="weui-media-box__yhc">
-                <view class="weui-media-box__yhc-item">卖出价格<text>88.00%</text><text>市价</text></view>
-                <view class="weui-media-box__yhc-item">卖出数量<text>40</text><text>万股</text></view>
-              </view>
+            </navigator>
+          </block>
+          <view class="weui-cellss weui-cells_after-title" wx:if="{{!sendList}}">
+            <view class="find_result">
+              <image src="../../images/find_result.png"></image>
+              <view style="color:#888888;">这里是空的哦~</view>
             </view>
-          </navigator>
-          <navigator url="../project/dz_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-              <view class="weui-media-box__title">游族网络
-                <text class="gupiao_code">[002174]</text>
-                <text class="gupiao_style">一手</text>
-              </view>
-              <view class="weui-media-box__desc">传媒-移动互联网服务</view>
-              <view class="weui-media-box__yhc">
-                <view class="weui-media-box__yhc-item">卖出价格<text>88.00%</text><text>市价</text></view>
-                <view class="weui-media-box__yhc-item">卖出数量<text>40</text><text>万股</text></view>
-              </view>
-            </view>
-          </navigator>
+          </view>
         </view>
       </view>
     </view>

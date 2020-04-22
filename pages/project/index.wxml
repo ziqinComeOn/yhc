@@ -71,16 +71,7 @@
           </view>
         </view>
       </view>
-      <!-- 大宗交易end -->
-      <!-- <view class="weui-cell__bd">{{item.tradetype}}
-        <text style="font-size:24rpx;color:#AAAAAA;">\n{{item.date_2}}</text>
-      </view>
-      <view class="weui-cell__ft" style="color:#000000;" wx:if="{{currentTab==0}}">+{{item.cashfee}}
-        <text style="font-size:24rpx;color:#888888">\n累计{{item.add_up}}</text>
-      </view>
-      <view class="weui-cell__ft" style="color:#000000;" wx:else>-{{item.cashfee}}
-        <text style="font-size:24rpx;color:#888888">\n累计{{item.add_up}}</text>
-      </view> -->
+      
     </view>
     <!-- 列表 start-->
     <view class="page-section weui-cell_yhc">
@@ -104,7 +95,8 @@
         </view>
 
         <view class="weui-panel__bd">
-          <navigator url="" class="weui-media-box weui-media-box_appmsg" wx:for="{{sendList}}" wx:key="index" data-item="{{item}}">
+          <block  wx:for="{{sendList}}" wx:key="index" data-item="{{item}}">
+          <navigator url="../project/dz_detail?id={{item.j_id}}" class="weui-media-box weui-media-box_appmsg">
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{item.j_name}}
                 <text class="gupiao_code">[{{item.j_daima}}]</text>
@@ -113,10 +105,11 @@
               <view class="weui-media-box__desc">传媒-移动互联网服务</view>
               <view class="weui-media-box__yhc">
                 <view class="weui-media-box__yhc-item">卖出价格<text>88.00%</text><text>市价</text></view>
-                <view class="weui-media-box__yhc-item">卖出数量<text>{{item.j_crcunm}}</text><text>万股</text></view>
+                <view class="weui-media-box__yhc-item">卖出数量<text>{{item.j_crcnum}}</text><text></text></view>
               </view>
             </view>
           </navigator>
+          </block>
         </view>
       </view>
     </view>

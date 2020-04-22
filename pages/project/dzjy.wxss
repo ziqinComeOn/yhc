@@ -3,3 +3,6 @@
 .page__bd{
   margin-top:0; 
 }
+.weui-panel:after{
+ border-bottom:none;
+}
