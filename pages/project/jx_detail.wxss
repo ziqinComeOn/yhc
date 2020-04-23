@@ -100,6 +100,9 @@
 .weui-cell:after{
   border-bottom:none;
 }
+.weui-cells:after{
+  border-bottom:none;
+}
 .weui-panel:before{
   border-top:none !important;
 }

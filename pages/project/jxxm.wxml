@@ -1,18 +1,26 @@
 <view class="page">
   <!-- 精选项目 start -->
   <view class="page__bd">
-    <view class="weui-panel weui-panel_access">
+    <view class="weui-cellss weui-cells_after-title" wx:if="{{!sendList}}">
+    <view class="find_result">
+      <image src="../../images/find_result.png"></image>
+      <view style="color:#888888;">这里是空的哦~</view>
+    </view>
+  </view>
+    <view class="weui-panel weui-panel_access" wx:else>
       <!-- <view class="weui-panel__hd">图文组合列表</view> -->
       <view class="weui-panel__bd">
-        <navigator url="../project/jx_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <block wx:for="{{sendList}}" wx:key="index" data-item="{{item}}">
+        <navigator url="../project/jx_detail?id={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
             <image class="weui-media-box__thumb" src="../../images/jingpin.png" />
           </view>
           <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-            <view class="weui-media-box__title">可转债业务融资</view>
-            <view class="weui-media-box__desc">可转债业务融资</view>
+            <view class="weui-media-box__title">{{item.name}}</view>
+            <view class="weui-media-box__desc">{{item.desc}}</view>
           </view>
         </navigator>
+        </block>
         <navigator url="../project/jx_detail" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
             <image class="weui-media-box__thumb" src="../../images/binggou.jpg" />
@@ -24,9 +32,19 @@
         </navigator>
       </view>
       <view class="weui-panel__ft">
-        <view class="weui-cell weui-cell_access weui-cell_link">
-          <view class="weui-cell__bd">查看更多</view>
-          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        <view class="weui-cell weui-cell_access weui-cell_link" style="padding:0;">
+        </view>
+        <view wx:if='{{!isRefreshing}}' class="weui-loadmore">
+          <view wx:if='{{isLoadingMoreData}}'>
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore-tips">正在加载更多...</view>
+          </view>
+          <view wx:elif='{{hasMoreData}}'>
+            <view class="weui-loadmore-tips" bindtap='onReachBottom'>点击加载更多</view>
+          </view>
+          <view wx:else>
+            <view class="weui-loadmore-tips">没有更多内容啦</view>
+          </view>
         </view>
       </view>
     </view>

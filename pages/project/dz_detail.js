@@ -17,8 +17,7 @@ Page({
   onLoad: function (options) {
     var id = options.id
     var that = this
-    app.reqGetfunc.reqGet('index/dzjy',{'id':id},function(res){
-       console.log(res)
+    app.reqGetfunc.reqGet('wxyaosu/dzjy',{'id':id},function(res){
        that.setData({msg:res.msg})
     })
 

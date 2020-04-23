@@ -8,6 +8,9 @@ Page({
     navTab: ['大宗交易', '定向增发', '精选项目'],
     currentTab: 0,
     sendList: [],
+    hasMoreData: true,
+    isRefreshing: false,
+    isLoadingMoreData: false
   },
   select: {
     page: 1,
@@ -39,9 +42,19 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.getData()
+    wx.showToast({
+      title: '加载中...',
+      icon: 'loading',
+      duration: 5000
+    })
+    
+    this.setData({
+      isLoadingMoreData: true
+    })
+    this.getData()//数据请求
+    //this.getData()
   },
-
+  
   /**
    * 用户点击右上角分享
    */
@@ -117,33 +130,62 @@ Page({
     }
 
     if (this.data.currentTab == 1) {
-      console.log(this.select.page)
+      wx.showToast({
+        title: '加载中',
+        icon: 'loading',
+      })
       //定向增发
-      app.reqPostfunc.reqPost('wechat/myfile/get_money_out.php', { my_id: wx.getStorageSync('my_id'), my_session: wx.getStorageSync('my_session') }, function (res) {
-        var content = res;
-        _this.setData({
-          sendList: (_this.data.sendList).concat(content)
-        })
-        if (content.length > 0) {
-          _this.select.page++
+      app.reqPostfunc.reqPost('wxyaosu/zf_index.html', { page: this.select.page, size: this.select.size}, function (res) {
+        if (res.status == 'OK') {
+          var content = res.data;
+          _this.setData({
+            sendList: (_this.data.sendList).concat(content)
+          })
+          if (content.length > 0) {
+            _this.select.page++
+          } else {
+            _this.select.isEnd = true
+          }
+          wx.hideToast()
         } else {
-          _this.select.isEnd = true
+          //没有更多数据了
+          wx.showToast({
+            title: '没有更多了',
+            icon: 'none',
+            mask: true,
+            duration: 2000
+          })
         }
       })
     }
 
     if (this.data.currentTab == 2) {
       //精选项目
-      app.reqPostfunc.reqPost('wechat/myfile/get_money_wxout.php', { my_id: wx.getStorageSync('my_id'), my_session: wx.getStorageSync('my_session') }, function (res) {
-        var content = res;
-        _this.setData({
-          sendList: (_this.data.sendList).concat(content)
-        })
-        if (content.length > 0) {
-          _this.select.page++
+      app.reqPostfunc.reqPost('wxyaosu//pickitem_index', { page: this.select.page, size: this.select.size}, function (res) {
+        if (res.status == 'OK') {
+          var content = res.data;
+          _this.setData({
+            sendList: (_this.data.sendList).concat(content)
+          })
+          if (content.length > 0) {
+            _this.select.page++
+          } else {
+            _this.select.isEnd = true
+          }
+          wx.hideToast()
         } else {
-          _this.select.isEnd = true
+          //没有更多数据了
+          wx.showToast({
+            title: '没有更多了',
+            icon: 'none',
+            mask: true,
+            duration: 2000
+          })
+
+          _this.setData({ hasMoreData: false})
         }
+        _this.setData({ isLoadingMoreData: false, isRefreshing: false,})
+
       })
     }
 

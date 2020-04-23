@@ -7,24 +7,24 @@
               <view class="weui-cells weui-cells_in-small-appmsg weui-cells_noline">
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_noline">
                   <view class="weui-cell__hd">
-                  中山公用
+                  {{msg.name}}
                   </view>
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view">[000685]</view>
+                    <view class="weui-cell_primary_view">[{{msg.daima}}]</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
                     <image style="width:48rpx;height:48rpx;" src="../../images/shoucang.png"></image>
                   </view>
-                  <view class="shoucang_d">228</view>
+                  <view class="shoucang_d">{{msg.collects}}</view>
                 </view>
                 <view class="weui-cell_yhc_tag">
                   <view class="weui-cell_yhc_tag-item">
-                    <text class="gupiao_style">现金竞价</text>
+                    <text class="gupiao_style">{{msg.zengfa_way}}</text>
                     
                   </view>
                   <view class="weui-cell_yhc_tag-item">
                     <view class="weui-cell_yhc_tag-item_inblock">
-                      <image src="../../images/view.png" style="width:48rpx;height:48rpx;"></image><text class="weui-cell_yhc_tag-item-txt">30</text>
+                      <image src="../../images/view.png" style="width:48rpx;height:48rpx;"></image><text class="weui-cell_yhc_tag-item-txt">{{msg.views}}</text>
                     </view>
                     
                   </view>   
@@ -41,7 +41,7 @@
           <swiper-item class="swiper-item_background">
             <view class="swiper-item_background_in {{item}}">
               <view class="swiper-item_background_in_view">
-                <view class="swiper-item_background_in_view_color">56.29%</view>
+                <view class="swiper-item_background_in_view_color">{{msg.jiachalv}}%</view>
                 <view>价差率</view>
               </view>
             </view>
@@ -49,7 +49,7 @@
           <swiper-item class="swiper-item_background">
             <view class="swiper-item_background_in {{item}}">
               <view class="swiper-item_background_in_view">
-                <view>8.83亿元</view>
+                <view>{{msg.muji_total}}亿元</view>
                 <view>募集规模</view>
               </view>
             </view>
@@ -57,16 +57,16 @@
         </swiper>
         <view class="page__bd_spacing">
           <view class="weui-flex__item">
-            <view class="placeholder"><view class="weui-flex__item_color">昨日收盘价</view>7.48元/股</view>
+            <view class="placeholder"><view class="weui-flex__item_color">昨日收盘价</view>{{msg.yes_shoupanjia}}元/股</view>
           </view>
           <view class="weui-flex__item">
-            <view class="placeholder"><view class="weui-flex__item_color">发行底价</view>--</view>
+            <view class="placeholder"><view class="weui-flex__item_color">发行底价</view><block wx:if="{{msg.faxing_jia}}">{{msg.faxing_jia}}</block><block wx:else>--</block></view>
           </view>
           <view class="weui-flex__item">
-            <view class="placeholder"><view class="weui-flex__item_color">市盈率</view>11.8047</view>
+            <view class="placeholder"><view class="weui-flex__item_color">市盈率</view>{{msg.shiyinglv}}</view>
           </view>
           <view class="weui-flex__item">
-            <view class="placeholder"><view class="weui-flex__item_color">定增数量</view>1.83亿股</view>
+            <view class="placeholder"><view class="weui-flex__item_color">定增数量</view>{{msg.dingzeng_nums}}亿股</view>
           </view>
         </view>
       </view>
@@ -85,7 +85,7 @@
                     <view class="weui-cell_primary_view">申万行业</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    公用事业
+                    {{msg.shenwan}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -93,7 +93,7 @@
                     <view class="weui-cell_primary_view">昨日收盘价</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    7.48元
+                    {{msg.yes_shoupanjia}}元
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -101,7 +101,7 @@
                     <view class="weui-cell_primary_view">发行底价</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    --
+                    <block wx:if="{{msg.faxing_jia}}">{{msg.faxing_jia}}</block><block wx:else>--</block>
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -109,7 +109,7 @@
                     <view class="weui-cell_primary_view">主承销商</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    广发证券股份有限公司
+                    {{msg.zhuchengxiao}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -117,7 +117,7 @@
                     <view class="weui-cell_primary_view">限售期</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    12个月
+                    {{msg.xianshou}}个月
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -125,7 +125,7 @@
                     <view class="weui-cell_primary_view">市盈率</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    11.8047
+                    {{msg.shiyinglv}}
                   </view>
                 </view>
           
@@ -144,10 +144,10 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view">证监会批准</view>
+                    <view class="weui-cell_primary_view">{{msg.jindu}}</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    2015-10-15
+                    {{msg.jindu_date}}
                   </view>
                 </view>
                 
@@ -166,7 +166,7 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view weui-cell_primary_view_other">绩优股，高回报</view>
+                    <view class="weui-cell_primary_view weui-cell_primary_view_other">{{msg.liangdian}}</view>
                   </view>
                 </view>
                 
@@ -188,7 +188,7 @@
                     <view class="weui-cell_primary_view">证券简称</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    中山公用
+                    {{msg.name}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -196,7 +196,7 @@
                     <view class="weui-cell_primary_view">证券全称</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    中山公用事业集团股份有限公司
+                    {{msg.all_name}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -204,7 +204,7 @@
                     <view class="weui-cell_primary_view">总市值</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    109.25亿元
+                    {{msg.total_market_value}}亿元
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -212,7 +212,7 @@
                     <view class="weui-cell_primary_view">流通市值</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    92.99亿元
+                    {{msg.circul_market_value}}亿元
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -220,7 +220,7 @@
                     <view class="weui-cell_primary_view">主营业务范围</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    供水、污水、废液处理、市场租赁、物业管理。
+                    {{msg.main_business}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -228,7 +228,7 @@
                     <view class="weui-cell_primary_view">公司性质</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    地方国有企业
+                    {{msg.nature_company}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -236,7 +236,7 @@
                     <view class="weui-cell_primary_view">办公地址</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    广东省中山市兴中道18号财兴大厦北座
+                    {{msg.location}}
                   </view>
                 </view>
 
@@ -255,7 +255,7 @@
 
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
-                    <view class="weui-cell_primary_view weui-cell_primary_view_other">11万股东</view>
+                    <view class="weui-cell_primary_view weui-cell_primary_view_other">{{msg.shareholder}}</view>
                   </view>
                 </view>
                 

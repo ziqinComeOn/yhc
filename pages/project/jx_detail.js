@@ -1,4 +1,5 @@
 // pages/project/dz_detail.js
+var app = getApp()
 Page({
 
   /**
@@ -12,7 +13,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
+    var id = options.id
+    var that = this
+    app.reqGetfunc.reqGet('wxyaosu/pick_item', { 'id': id }, function (res) {
+      console.log(res)
+      that.setData({ msg: res.msg })
+    })
   },
 
   /**

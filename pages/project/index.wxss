@@ -213,4 +213,11 @@
 .table-tdd{
   font-size:24rpx;
 }
+.weui-cells:before{
+  border-top:none;
+}
+.weui-panel:before{
+  border-top:none;
+}
+
   

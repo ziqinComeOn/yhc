@@ -20,7 +20,7 @@ Page({
     wx.showToast({
       title: '加载中',
       icon: 'loading',
-      duration:'10000'
+      duration:10000
     })
     this.getData()
   },
@@ -82,9 +82,10 @@ Page({
     wx.showToast({
       title: '加载中',
       icon: 'loading',
+      duration:10000
     })
     //大宗交易
-    app.reqPostfunc.reqPost('wxyaosu/jc_index.html', { page: this.select.page, size: this.select.size }, function (res) {
+    app.reqPostfunc.reqPost('wxyaosu/jc_index', { page: this.select.page, size: this.select.size }, function (res) {
         if (res) {
 
           var content = res;

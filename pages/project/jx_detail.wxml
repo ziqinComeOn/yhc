@@ -5,8 +5,8 @@
           <view class="weui-panel__bd">
             <navigator url="#" class="weui-media-box weui-media-box_appmsg" hover-class="none">
               <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                <view class="weui-media-box__title">材料制作企业并购基金</view>
-                <view class="weui-media-box__desc">2020-03-18</view>
+                <view class="weui-media-box__title">{{msg.name}}</view>
+                <view class="weui-media-box__desc">{{msg.add_time}}</view>
               </view>
             </navigator>
           </view>
@@ -26,7 +26,7 @@
                     <view class="weui-cell_primary_view">所属行业</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    材料制造
+                    {{msg.trade}}
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -34,7 +34,7 @@
                     <view class="weui-cell_primary_view">借款期限</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    2+1年
+                    {{msg.years}}年
                   </view>
                 </view>
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
@@ -42,26 +42,39 @@
                     <view class="weui-cell_primary_view">融资规模</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    5亿元
+                    {{msg.rongzi_guimo}}亿元
                   </view>
                 </view>
+                <block wx:if="{{msg.usage}}">
                 <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
                     <view class="weui-cell_primary_view">使用用途</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    新项目投资，日常企业经营
+                    {{msg.usage}}
                   </view>
                 </view>
+                </block>
+                <block wx:if="{{msg.cuoshi}}">
+                <view class="weui-cell weui-cell_example weui-cell_access weui-cell_access_background">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view class="weui-cell_primary_view">增信措施</view>
+                  </view>
+                  <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
+                    {{msg.cuoshi}}
+                  </view>
+                </view>
+                </block>
+                 <block wx:if="{{msg.introduction}}">
                 <view class="weui-cell weui-cell_top weui-cell_example weui-cell_access weui-cell_access_background">
                   <view class="weui-cell__bd weui-cell_primary">
                     <view class="weui-cell_primary_view">简要说明</view>
                   </view>
                   <view class="weui-cell__ft weui-cell__ft_in-accesss weui-cell__ft-active">
-                    拟成立并购基金，融资公司提供增信措施
+                    {{msg.introduction}}
                   </view>
                 </view>
-                
+                </block>
               </view>
             </view>
           </view>
